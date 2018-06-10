@@ -1,0 +1,223 @@
+\documentclass[11pt,letterpaper,english]{article}
+\usepackage[T1]{fontenc} % Standard package for selecting font encodings
+\usepackage{txfonts} % makes spacing between characters space correctly
+\usepackage{xcolor} % Driver-independent color extensions for LaTeX and pdfLaTeX.
+\usepackage{hyperref}  %The ability to create hyperlinks within the document
+%\usepackage{blindtext} % To create text
+%\usepackage{mdwlist} % mdwlist for compact enumeration/list items
+%\usepackage[pagestyles]{titlesec} % related with sections—namely titles, headers and contents
+\usepackage{fancyhdr} % header footer placement
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in] {geometry} % Margins
+\usepackage{graphicx}   % Essential for adding images to you document.
+
+\usepackage{enumitem}  % Helps with the reduce itemize/enumerate separations
+
+\usepackage{sectsty}
+\sectionfont{\normalsize}
+\subsectionfont{\normalsize}
+\subsubsectionfont{\normalsize \it}
+
+\usepackage[font=bf]{caption}
+\captionsetup{labelsep=period}
+
+\setlength{\parskip}{\baselineskip}%
+\setlength{\parindent}{0pt}%
+
+
+\pagestyle{fancy} % allows you to use the header and footer commands
+
+
+\raggedright
+\begin{document}
+
+\setlength{\parindent}{0in} % Amount of indentation at the first line of a paragraph.
+
+\pagestyle{fancy} \lhead{Title} \rhead{Lead PI} \renewcommand{%
+\headrulewidth}{0.0pt}
+
+\begin{center}
+{\bf PROJECT NARRATIVE (The narrative should not exceed 15 pages)} 
+\end{center}
+
+\vspace{-.15in}
+
+%\colorbox{yellow} {\bf {\emph{[Refer to the guidelines for additional instructions for preparing the proposal.]}}}
+
+%\vspace{.15in}
+
+Visual materials, such as charts, graphs, pictures, etc., are included in the 15-page limit. References {\bf do not} count in the 15-page limit and should be listed after the Project Narrative. URLs that provide information related to the proposal should not be included. {\bf The 15-page limit will be strictly enforced.}  The Project Narrative should address the following points:
+
+\vspace{-.25in}
+\section{SIGNIFICANCE OF RESEARCH}
+\vspace{-.2in}
+List any previous INCITE award(s) received and discuss the relationship to the work proposed. Explain what advances you expect to be enabled by an INCITE award that justifies an allocation of petascale resources (e.g., anticipated impact on community paradigms, valuable insights into or solving a long-standing challenge, etc.). Place the proposed research in the context of competing work in your discipline or business. The information should be sufficient for peer review in your area of research and also appropriate for general scientific review comparing your proposal with proposals in other disciplines. Potential scientific or business impact is the predominant determinant for awards. This factor will be assessed by a peer-review panel. Also list any previous INCITE award(s) received and discuss the relationship to the work proposed. {\bf This section is typically about 4 pages.}
+
+When you cite a reference, please insert a number in brackets, as shown here [1], to correspond to its number on the reference list at the end of this template. Please call out the references in numerical order and list them in the same way. The reference list will {\bf not} count toward the 15-page limit.
+
+Insert paragraph(s).
+\vspace{-.25in}
+\subsection{Heading 2 (optional)}
+\vspace{-.2in}
+
+Insert paragraph(s).
+
+\vspace{-.25in}
+\subsubsection{Heading 3 (optional)}
+\vspace{-.2in}
+
+Insert paragraph(s).
+
+\vspace{-.25in}
+\section{RESEARCH OBJECTIVES AND MILESTONES }  
+\vspace{-.2in}
+Describe the proposed research, including its goals and milestones and the theoretical and computational methods it employs. Goals and milestones should articulate simulation and developmental objectives and be sufficiently detailed to assess the progress of the project for each year of any allocation granted. Milestones should correlate with those in the milestone table. It is especially important that you provide clear connections between the project's overarching milestones, the planned computational campaign, and the compute time expected to be required for this campaign (e.g., should correlate with those in the ``Use of Resources Requested''). {\bf This section is typically about 6 pages.}
+
+If included, call out equations, tables, figures, and references in numerical order in text, such as Eqs. (\ref{Eq. 1}) and (\ref{Eq. 2}), Table \ref{Tab1}, and Fig. \ref{Fig1} below.
+
+\vspace{-.15in}
+\begin{equation} \label{Eq. 1} 
+\partial ,\phi +u\cdot \nabla \phi =\nabla ^{2} \phi +\frac{1}{\tau } R\left(\phi \right)\, \, ,
+\end{equation} 
+
+\vspace{-.15in}
+\begin{equation} \label{Eq. 2} 
+\frac{\partial \phi }{\nabla \phi } =\frac{1}{2} \nabla ^{2} \phi \frac{e^{\frac{-R-R^{2} }{2u} } }{\left(2\tau \right)^{3N/2} } \sqrt{xyz} \, \, \sum 1+23\, \, \, . 
+\end{equation} 
+
+\begin{table}[h]
+\centering
+\caption{Table title}
+\vspace{-.15in}
+\label{Tab1}
+\begin{tabular}{llll} \\ \hline 
+\textbf{Column one} & \textbf{Column two} & \textbf{Column three} & \textbf{Column four} \\ \hline 
+ xxx & xxx\textit{${}^{a}$} & xxx & xxx \\ \hline 
+xxx & xxx & xxx & xxx \\ \hline 
+{\textit{$^{a}$}Footnote here.} \\
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4.52in, height=3.08in, keepaspectratio=true]{image1.jpg}
+\caption{Figure caption.}
+\label{Fig1}
+\end{figure}
+
+\vspace{-.25in}
+\subsection{Heading 2 (optional)}
+\vspace{-.2in}
+
+Insert paragraph(s).
+
+\vspace{-.25in}
+\subsubsection{Heading 3 (optional)}
+\vspace{-.2in}
+
+Insert paragraph(s).
+
+\vspace{-.25in}
+\section{COMPUTATIONAL READINESS}
+\vspace{-.2in}
+
+Proposals will be assessed on the need for, readiness to use, and reasonableness of the request for resources. Proposals should summarize the requirement(s) that best exemplifies the proposed computational work. Leadership targets in the INCITE program typically include one or both of the following categories:
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Use of 20 percent or more of the system for production calculations. Simulations, data, and/or learning science projects should use a significant fraction of LCF resources, which can include compute, memory, network or disk, for example. Parameter sweeps, ensembles, design of experiments, and other statistical methods that require large numbers of discrete or loosely coupled simulations may be considered capability-class campaigns. See the FAQs for details and qualifiers.\\
+\item Specific architectural needs that can only be met by the LCF.
+\end{itemize}
+\vspace{.1 in}
+{ \bf This section, including the following subsections, is typically about 5 pages.}
+
+Insert paragraph(s).
+
+\vspace{-.25in}
+\subsection{Use of Resources Requested}
+\vspace{-.2in}
+
+Describe your proposed production simulations and state how the runs are tied to each of your project's goals and milestones (Section 4, "Milestone Table"). Note that the Milestone Table should be a summary of the detailed information provided here.  For the research campaign you plan to carry out, provide a
+
+\begin{enumerate}[noitemsep,topsep=0pt]
+\item Description of what computations are going to be run and how they relate to the research/development objectives and milestones given above;
+\item Description of processor/node use for large runs (e.g., 10,000-hour run with 100 nodes, or ten 10-hour runs with 10,000 nodes, for a 1,000,000 node-hour allocation) and for the GPU-accelerated resources, indicate which of these production simulations employ the GPUs. 
+\item Clear, detailed explanation as to how you calculated the requested number of node-hours;
+\item Summary of your anticipated annual burn rate (e.g., linear or with periods of peak usage).  
+\item For projects that are in the space of data, learning or other emerging technologies, a description of how the unique LCF resources (e.g. the unique node or system architecture, inter-node parallelism, intra-node parallelism, the deep memory hierarchy including SSDs, high band-width network, or data storage) enable your campaign.\\
+\end{enumerate}
+
+\vspace{.1in}
+Also describe the data requirements of your campaign, including:
+
+\begin{enumerate}[noitemsep,topsep=0pt]
+\setcounter{enumi}{4}
+\item Estimate and breakdown of the anticipated cumulative size of stored data, in scratch and long-term archival storage, at the end of the requested award. 
+\item Description of the effective lifetime of your stored data.  If the lifetime varies, show the breakdown by the total size used.  Explain the reason for the lifetime.
+\item Description of the data, including the expected size of the data, which will be transferred into or out of the center.  Describe what tools for transferring the data from external sources will be used.
+\item Description of the tools for data storage, compression (reduction), and analysis that you currently use. Describe whether the tools and/or applications needed are ready or whether there are new capabilities or features that must be developed.
+\item If you are intending to make any fraction of the data generated public, specify:
+\begin{enumerate}[noitemsep,topsep=0pt]
+\item How much data and the scientific purpose
+\item What tool will be used to share the data
+\item From where will the data be shared\\
+\vspace{.1in}
+If at any point during your project the sum of your data storage needs in the scratch filesystems exceed 500 terabytes, specific justification is required. 
+
+NOTE: The LCF data management policies can be found at
+
+OLCF:  {\href{https://www.olcf.ornl.gov/computing-resources/data-management/data-management-user-guide/}{https://www.olcf.ornl.gov/computing-resources/data-management/data-management-user-guide/}}
+
+ALCF:  {\href{http://www.alcf.anl.gov/user-guides/data-policy}{http://www.alcf.anl.gov/user-guides/data-policy}}
+\end{enumerate}
+\end{enumerate}
+
+\vspace{-.25in}
+\subsection{Computational Approach}
+\vspace{-.2in}
+
+Provide a detailed description of your computational approach, including a discussion of the state of the art in the field. The description should also mention:
+
+\vspace{-.25in}
+\begin{enumerate}
+\item Particular libraries required by the production and analysis software, algorithms and numerical techniques employed (e.g., finite element, iterative solver), programming languages, and other software used.
+\item Parallel programming model(s) used (e.g., MPI, OpenMP/Pthreads and vector intrinsics (QPX/AVX-512) for BG/Q or Xeon Phi; MPI, OpenMP/Pthreads, CUDA, OpenACC or AVX intrinsics for XK7).
+\item Project workflow including the role of analysis and visualization; identify where the analysis will be done and any potential bottlenecks in the analysis process.  Describe any analysis and/or data reduction tools used.
+\item Software workflow solution (e.g., pre- and postprocessing scripts that automate run management and analysis) to facilitate this volume of work.
+\item I/O requirements (e.g., amount, size, bandwidth, etc.) for restart, analysis, and workflow. Highlight any exceptional I/O needs.
+\item For projects that are in the space of data, learning or other emerging technologies, a detailed description of the efficacy of software or proposed software which will be developed to utilize the requested resources and whether that software is already installed and working on the LCF resources
+\end{enumerate}
+
+\vspace{-.25in}
+\subsection{Parallel Performance}
+\vspace{-.2in}
+
+Provide direct evidence, {\bf including supporting quantitative data}, for your production application?s parallel performance for the intended campaign. Ideally, the proposing team will demonstrate proficiency with their application codes, will have generated the performance data on the LCF resource requested or another comparable resource, and these data will be representative of the entire workflow of the project proposed. If you cite work by others, explain why it is applicable here. You should use the application code you intend for the production work, not a related code. Data for sample systems not related to the intended research is undesirable. Performance benchmarking should reflect all I/O and workflow requirements. Parallel performance data in either strong or weak scaling mode must be provided. Explain how the strong or weak scaling applies to the proposed work. 
+
+NOTE: You may apply for a startup account at one of the centers to conduct performance studies. Applications are available at
+
+ALCF: {\href{http://www.alcf.anl.gov/getting-started/apply-for-dd}{http://www.alcf.anl.gov/getting-started/apply-for-dd}}
+
+OLCF: {\href{http://www.olcf.ornl.gov/support/getting-started/olcf-director-discretion-project-application}{http://www.olcf.ornl.gov/support/getting-started/olcf-director-discretion-project-application}}
+
+\vspace{-.25in}
+\subsection{Developmental Work}
+\vspace{-.2in}
+
+For the computational approach above, describe what, if any, development work has been carried out to date, especially on the architecture of the requested resource. Describe what development work will be executed, and when, during the proposed INCITE campaign, and an estimate of the computational resources required for this work.  If applicable, identify the milestones and production simulations in Section 2.3.i that are dependent on the developmental work and provide a plan for validating this developmental work.
+
+\vspace{-.25in}
+\section{REFERENCES}
+\vspace{-.15in}
+
+References are optional and may be structured in accordance with any style. They {\bf \em {do not}} count toward the 15-page limit.
+\vspace{-.15in}
+\begin{enumerate}\itemsep0pt
+\item First Author, Second Author, and Third Author, ``An article in a journal,'' {\em Journal Name} {\bf 32}(4): 46--52.\\
+\item First Author and Second Author, {\em Report Title}, Report Number, Publishing Organization or Agency, City, State, 2013.
+\item First Author et al., ``Chapter Title,'' {\em Book Title}, Publisher, City, State, 2011.
+\item Corporate or Agency Author, {\em Book Title}, Publisher, City, State, 2012.
+\end{enumerate}
+
+
+
+\end{document}

@@ -1,0 +1,111 @@
+\documentclass[11pt,letterpaper,english]{article}
+\usepackage[T1]{fontenc} % Standard package for selecting font encodings
+\usepackage{txfonts} % makes spacing between characters space correctly
+\usepackage{xcolor} % Driver-independent color extensions for LaTeX and pdfLaTeX.
+%\usepackage{blindtext} % To create text
+%\usepackage{mdwlist} % mdwlist for compact enumeration/list items 
+%\usepackage[pagestyles]{titlesec} % related with sections—namely titles, headers and contents
+\usepackage{fancyhdr} % header footer placement
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in] {geometry} % Margins
+\usepackage{graphicx}   % Essential for adding images to you document.
+
+\usepackage{sectsty}
+\sectionfont{\large}
+\subsectionfont{\normalsize}
+\subsubsectionfont{\normalsize \it}
+
+\usepackage{caption}
+\captionsetup{labelsep=period}
+
+\pagestyle{fancy} % allows you to use the header and footer commands 
+
+\raggedright
+\begin{document}
+
+\setlength{\parindent}{0in} % Amount of indentation at the first line of a paragraph.
+
+\pagestyle{fancy} \lhead{The Detailed Physical Structure of the Circumgalactic Medium} \rhead{Evan Schneider} \renewcommand{%
+\headrulewidth}{0.0pt}
+
+
+
+\centering {\bf Curriculum Vitae ({\emph{2-page limit}})}\\
+{\bf Evan Schneider}\\
+{\bf Dept. of Astrophysical Sciences, Princeton University, es26@princeton.edu} \smallskip
+
+\begin{flushleft} {\bf Professional Preparation}
+{\parindent 16pt
+
+PhD, Astronomy \& Astrophysics, University of Arizona, 2017 \\ 
+MS, Astronomy, University of Arizona, 2012 \\ 
+BA, Physics \& Mathematics, Bryn Mawr College, 2010 \\ 
+}
+
+\vspace{.04in}
+{\bf Appointments}
+{\parindent 16pt
+
+2017--present NASA Hubble Postdoctoral Fellow, Princeton University \\ 
+2016--2017 Junior Research Specialist, University of California, Santa Cruz \\ 
+2014--2016 Graduate Research Assistant, University of Arizona \\ 
+2011--2014 NSF Graduate Research Fellow, University of Arizona \\ 
+2010--2011 Steward Observatory Graduate Fellow, University of Arizona \\ 
+}
+
+\vspace{.04in}
+{\bf Five Publications Most Relevant to This Proposal}
+\vspace{-6pt}
+\begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt
+\item "Production of Cool Gas in Thermally Driven Outflows", Schneider, E., et al. \textit{The Astrophysical Journal, in press} (2018).
+\item "Introducing CGOLS: The Cholla Galactic OutfLow Simulation Suite", Schneider, E. \& Robertson, B. \textit{The Astrophysical Journal, in press} (2018).
+\item "Hydrodynamical Coupling of Mass and Momentum in Multiphase Galactic Winds", Schneider, E. \& Robertson, B. \textit{The Astrophysical Journal}, {\bf 834}, 144 (2017)\\ 
+\item "CHOLLA: A New Massively Parallel Hydrodynamics Code for Astrophysical Simulation", Schneider, E. \& Robertson, B. \textit{Astrophysical Journal Supplements}, {\bf 217}, 24 (2015)\\ 
+\end{enumerate} 
+
+\vspace{-6pt}
+{\bf Research Interests and Expertise}
+{\parindent 16pt
+PI Schneider's research interests center on the ways in which hydrodynamic processes affect galaxy formation and evolution, particularly the effects of stellar feedback. As the primary developer of the GPU-based astrophysics code \textit{Cholla}, Schneider is an expert in hydrodynamical simulation methodology. Given the dynamic range required in cosmological simulations, many baryonic processes remain unresolved. Schneider's Ph.D. thesis and ongoing work consist of using the code \textit{Cholla} to produce petascale astrophysical simulations that reveal previously unknown details of galactic structure, including the turbulent interstellar medium, galactic outflows, and the circumgalactic medium. Schneider served as CoI of the OLCF DD Project AST107 ``Scaling the GPU-enabled Hydrodynamics Code Cholla to the Power of Titan" and DD Project AST119 ``Extending the Physics of the GPU-Enabled CHOLLA Code to the Power of Titan", and is Co-PI of the OLCF INCITE Project AST125 ``Revealing the Physics of Galactic Winds with Petascale GPU Simulations".
+}
+
+\vspace{.04in}
+{\bf Synergistic Activities}
+\vspace{-6pt}
+\begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt
+\item Primary developer and maintainer of the astrophysical hydrodynamics code, \textit{Cholla}. \\ 
+\item Member of the OLCF Users Group Executive Board. \\
+\item Presented at various University of Arizona events emphasizing the utility of HPC systems. \\ 
+\item Attended the 2017 \& 2018 OLCF User Meetings in Oak Ridge, TN. \\ 
+\item Advocate for improving the representation of minorities in the HPC community. \\
+\item Referee for ApJ and MNRAS. \\
+\end{enumerate} 
+
+\vspace{-6pt}
+{\bf Collaborators ({\emph{past 5 years including name and current institution}})} 
+{\parindent 16pt
+Robertson, B. E., University of California, Santa Cruz \\
+Thompson, T. A., The Ohio State University \\
+Koekemoer, A., Space Telescope Science Institute \\
+Ellis, R. S., European Southern Observatory \\
+McLure, R. J., University of Edinburgh \\
+Dunlop, J. S., University of Edinburgh \\
+Ono, Y., University of Tokyo \\
+Schenker, M., PDT Partners \\
+Ouchi, M., University of Tokyo \\
+Bowler, R., University of Edinburgh \\
+Rogers, A., University of Edinburgh \\
+Curtis-Lake, E., University of Edinburgh \\
+Charlot, S., Institut d? Astrophysique de Paris \\
+Stark, D. P., University of Arizona \\
+Furlanetto, S., University of California, Los Angeles \\
+Cirasuolo, M., University of Edinburgh \\
+Wild, V., University of St. Andrews \\
+Targett, T. A., Sonoma State University \\
+Shimasaku, K., University of Tokyo \\
+}
+
+
+\end{flushleft}
+
+\end{document}
