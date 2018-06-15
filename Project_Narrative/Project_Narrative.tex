@@ -46,7 +46,7 @@
 
 %\vspace{.15in}
 
-Visual materials, such as charts, graphs, pictures, etc., are included in the 15-page limit. References {\bf do not} count in the 15-page limit and should be listed after the Project Narrative. URLs that provide information related to the proposal should not be included. {\bf The 15-page limit will be strictly enforced.}  The Project Narrative should address the following points:
+%Visual materials, such as charts, graphs, pictures, etc., are included in the 15-page limit. References {\bf do not} count in the 15-page limit and should be listed after the Project Narrative. URLs that provide information related to the proposal should not be included. {\bf The 15-page limit will be strictly enforced.}  The Project Narrative should address the following points:
 
 \vspace{-.25in}
 \section{SIGNIFICANCE OF RESEARCH}
@@ -54,19 +54,26 @@ Visual materials, such as charts, graphs, pictures, etc., are included in the 15
 %List any previous INCITE award(s) received and discuss the relationship to the work proposed. Explain what advances you expect to be enabled by an INCITE award that justifies an allocation of petascale resources (e.g., anticipated impact on community paradigms, valuable insights into or solving a long-standing challenge, etc.). Place the proposed research in the context of competing work in your discipline or business. The information should be sufficient for peer review in your area of research and also appropriate for general scientific review comparing your proposal with proposals in other disciplines. Potential scientific or business impact is the predominant determinant for awards. This factor will be assessed by a peer-review panel. Also list any previous INCITE award(s) received and discuss the relationship to the work proposed. {\bf This section is typically about 4 pages.}
 
 %When you cite a reference, please insert a number in brackets, as shown here [1], to correspond to its number on the reference list at the end of this template. Please call out the references in numerical order and list them in the same way. The reference list will {\bf not} count toward the 15-page limit.
-(Placeholder text. This section should be about {\bf 1 page}.)
+%(Placeholder text. This section should be about {\bf 1 page}.)
 
-This first section should be broad enough for a general audience comparing our proposal with those in other disciplines.
+Large-scale simulations of galaxy formation in the universe have made enormous strides in the past decade, with models that are now able to reproduce a remarkably wide range of observations.  However, the ability of these models to make predictions is hampered by their difficulty in modeling the small-scale gas physics that regulate how baryons get in to -- and out of -- galaxies, as well as how much of it cools to forms stars.   Currently the codes used for these simulations use sub-grid recipes that must be calibrated against observations, strongly reducing their ability to constrain fundamental physics such as the nature of dark energy or dark matter.  Some of the most challenging sub-grid physical models involve the multi-phase gas in and around galaxies.   In the past, such models could not be developed or tested through direct simulation due to the large range of scales present in astrophysical, multi-phase flows; however, recent advances in hardware and software have now made it possible to carry out the numerical models required to understand these flows. {\bf This proposal lays out a systematic plan that harnesses the leadership computing facility Titan XK7 and our GPU-native hydrodynamical simulation code Cholla [REF] in order to understand the development and evolution of multi-phase, turbulent astrophysical gas flows by resolving the relevant scales for the first time. }
 
-Broad science overview paragraph, including bold (literally and figuratively) thesis statement.
+Many astrophysical systems produce turbulent, pressure-confined diffuse gas which is prone to the formation of thermal instabilities.  Such systems include the circumgalactic medium of galaxies, the intracluster medium of X-ray clusters, and even the interstellar medium, and so play a key role in the evolution of many systems.  While the linear evolution of the thermal instability in extremely simplified systems has been well-studied, we still lack a good understanding of how this gas evolves in the non-linear stages and how the multi-phase state saturates.  A wide range of scales is likely to be involved and yet the cold clouds that form will be widely distributed, a combination which requires high resolution throughout the domain.  We are particularly motivated by the circumgalactic medium (CGM), the diffuse gas which lies outside of the disk of the galaxy and yet is still gravitationally bound to the overall system (which is dominated in mass by dark matter).  While this gas emits radiation very faintly and is difficult to detect directly, recent observations of background sources have been used to probe the CGM by measuring absorption lines of hydrogen and other elements.  Such work has produced a conundrum, with the detection of gas that it is at a wide range of temperatures and ionization states, something that cosmological simulations generally cannot reproduce, perhaps because they lack the resolution to model multiphase gas.
 
-Brief statement of the problem.
+Here, we propose to carry out a set of simulations of a small region of the CGM (we focus on the CGM in this proposal, but we expect our results to be much more widely applicable).  As described in more detail below, we have identified both the smallest and the largest scales that we believe we need to simulate in order to develop a physical understanding of the dynamics of cooling, turbulent gas.  The requirements are severe, with a ratio of largest to smallest length scales of order $10^{3-4}$; moreover, because of the turbulent nature of the gas, the cold clumps which condense out can do so anywhere and at many places nearly simultaneously, with no preferred geometry.  This means that we simply need to resolve the entire region at high resolution, a requirement which has prevented this from being done until now.  We will perform simulations to first determine the require resolution to numerically converge on the distribution of gas phases (our key takeaway), and then systematically vary the mean properties of the box (primarily density and velocity dispersion of the turbulent gas) based on galaxy simulations.  From this, we will develop both a physical understanding of the multiphase gas as well as simple model that can included in large-scale simulations.  In this way, we aim to make the cosmological simulations much less dependent on tuned sub-grid models and therefore more predictive.
 
-Brief description of the proposed simulations (solution).
 
-Brief description of the impact of the project on the community.
+%This first section should be broad enough for a general audience comparing our proposal with those in other disciplines.
 
-Brief description of previous awards and their relation to this proposal.
+%Broad science overview paragraph, including bold (literally and figuratively) thesis statement.
+
+%Brief statement of the problem.
+
+%Brief description of the proposed simulations (solution).
+
+%Brief description of the impact of the project on the community.
+
+(Brief description of previous awards and their relation to this proposal.)
 
 \vspace{-.25in}
 \subsection{Scientific Motivation}
