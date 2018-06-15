@@ -112,7 +112,7 @@ There is, in fact, a theoretical reason to believe that cold gas should reside i
 \begin{figure}[t]
     \centering
     \begin{minipage}{0.45\textwidth}
-	\caption{ The largest and smallest relevant length scales as a function of pressure. The dark blue line shows $\ell_{\rm cool} = c_{\rm s} \, t_{\rm cool}$, which is the expected minimum cold cloud size \cite{McCourt18} that we would want to resolve by at least several grid cells. The orange dashed line traces $R_{\rm CGM}$, the characteristic radius in the CGM at a given pressure from global CGM simulations \cite{Fielding17}. In order accurately model the multi-phase structure of the CGM it is necessary to include the dynamics on scales roughly $1/2 - 1/10 \ R_{\rm CGM}$. The range of scales necessary to capture, therefore, ranges from roughly a few 10s to a few 1000s. \label{fig:cs_tcool}}
+	\caption{ The largest and smallest relevant length scales as a function of pressure. The dark blue line shows $\ell_{\rm cool} = c_{\rm s} \, t_{\rm cool}$, which is the expected minimum cold cloud size \cite{McCourt18} that we would want to resolve by at least several grid cells. The orange dashed line traces $R_{\rm CGM}$, the characteristic radius in the CGM at a given pressure from global CGM simulations \cite{Fielding17}. In order to accurately model the multi-phase structure of the CGM it is necessary to include the dynamics on scales roughly $1/2 - 1/10 \ R_{\rm CGM}$. The range of scales necessary to capture, therefore, ranges from roughly a few 10s to a few 1000s. \label{fig:cs_tcool}}
     \end{minipage}\hfill
     \begin{minipage}{0.55\textwidth}
         \hspace{0.3cm} 
@@ -182,9 +182,12 @@ Previous awards include DD projects AST107 "Scaling the GPU-enabled Hydrodynamic
 \vspace{-.2in}
 %Describe the proposed research, including its goals and milestones and the theoretical and computational methods it employs. Goals and milestones should articulate simulation and developmental objectives and be sufficiently detailed to assess the progress of the project for each year of any allocation granted. Milestones should correlate with those in the milestone table. It is especially important that you provide clear connections between the project's overarching milestones, the planned computational campaign, and the compute time expected to be required for this campaign (e.g., should correlate with those in the ``Use of Resources Requested''). {\bf This section is typically about 6 pages.}
 
-(Placeholder text. This section should be about {\bf 6 pages}.)
+%(Placeholder text. This section should be about {\bf 6 pages}.)
 
-This section needs a lot of filling out. Basically, this is where we describe the set of simulations we plan to do, and why we're doing them. I've come up with a baseline set of simulations that I think we could do based on the computational time, and a baseline set of objectives and milestones. In describing the simulations, we should include density and temperature projections (I've put some that I generated in as placeholders at the moment). I think some of Drummond's density / temperature pdfs would be good in this section as well, to help describe the analysis we will do and how it relates to our research objectives.
+%This section needs a lot of filling out. Basically, this is where we describe the set of simulations we plan to do, and why we're doing them. I've come up with a baseline set of simulations that I think we could do based on the computational time, and a baseline set of objectives and milestones. In describing the simulations, we should include density and temperature projections (I've put some that I generated in as placeholders at the moment). I think some of Drummond's density / temperature pdfs would be good in this section as well, to help describe the analysis we will do and how it relates to our research objectives.
+
+As the discussion in the previous section makes clear, understanding the phase structure of turbulent, pressurized astrophysical flows is key to modeling galaxies.  It is also computationally challenging, with the ratio of the injection scale to the cooling length of order $R_{\rm CGM}/\ell_{\rm cool} \approx 10^3$.  In this section, we describe a systematic plan to model idealized flows which can model these flows under conditions appropriate for our physical system.  First, we need to determine what resolution is required to converge on the properties of interest (object RO.A in Table~\ref{table:RO}).  As detailed earlier, we believe we know what range of scales are important, but it is not clear precisely how many cells across the cooling length $l_{\rm cool}$ are necessary, and how sensitive the results are to the largest scales modeled ($R_{\rm CGM}$).  Therefore, to begin, we will identify a fiducial simulation (with parameters typical of the Milky Way CGM), and carry out a convergence study.  Once the convergence requirements are set, we will systematically vary our key parameters: the mean pressure in the box and the velocity dispersion (Research Object RO.B).  Finally, we will use these results to connect back to the global galaxy simulations (and their cosmological cousins) by developing a simple physical model and generating observational predictions (Research Object RO.C).
+
 
 \begin{table}[h]
 %\centering
@@ -199,6 +202,7 @@ This section needs a lot of filling out. Basically, this is where we describe th
 & both simulated and observable (e.g. halo mass, star-formation rate, etc.). \\
 \hline
 \end{tabular}
+\label{table:RO}
 \end{table}
 
 \begin{figure}[h]
