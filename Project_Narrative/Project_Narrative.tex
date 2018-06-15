@@ -75,6 +75,10 @@ Here, we propose to carry out a set of simulations of a small region of the CGM 
 
 (Brief description of previous awards and their relation to this proposal.)
 
+Three of the foremost questions in modern astrophysics are (i) what fuels the growth of galaxies, (ii) what quenches the growth of some galaxies, and (iii) where does most of the matter in universe reside. The flow of gas through the circumgalactic medium (CGM) -- the dilute gas that surrounds galaxies and fills their dark matter halos -- regulates the galaxy growth over cosmic time. 
+%GB: The above paragraph got added while I was working on mine -- maybe a conflict?
+
+
 \vspace{-.25in}
 \subsection{Scientific Motivation}
 \vspace{-.2in}
@@ -93,12 +97,50 @@ Outline the science background. I like to start with an interesting observation,
 \item{Additional benefits to the community (e.g. better physical understanding of CGM phase structure to inform observations, subgrid model for cosmological simulations, etc..}
 \end{itemize}
 
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=4.52in, height=3.08in, keepaspectratio=true]{cs_tcool_P_T_3.png}
+%\caption{This figure justifies our resolution requirements. Would be nice to have the minimum length scale in one panel (as shown), and a figure justifying the box size in another panel (if we can think of an appropriate figure).}
+%\label{Fig1}
+%\end{figure}
+
+
 \begin{figure}[h]
-\centering
-\includegraphics[width=4.52in, height=3.08in, keepaspectratio=true]{cs_tcool_P_T_3.png}
-\caption{This figure justifies our resolution requirements. Would be nice to have the minimum length scale in one panel (as shown), and a figure justifying the box size in another panel (if we can think of an appropriate figure).}
-\label{Fig1}
+    \centering
+    \begin{minipage}{0.6\textwidth}
+        \includegraphics[width=0.975\textwidth]{../figures/dMdlogT_picture_ion_all_P100_broad_narrow_3in.pdf} 
+    \end{minipage}\hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+\caption{\textit{Top}: Phase distribution showing the contribution from the virialized, cooling, and cold components. The sensitivity of the coldest phase to resolution and microphysics lead to changes in its distribution. \textit{Bottom}: Ion fraction for various ions that are or can be observed in the CGM of low redshift galaxies assuming they are at a pressure of $P/k_B = 100\,\mathrm{K\,cm}^{-3}$. Small changes to the phase structure at low temperatures can have a major impact on the integrated ion column densities and therefore the inferred CGM properties.\label{fig:multiphase}} 
+\end{minipage}
 \end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+	\caption{ The largest and smallest relevant length scales as a function of pressure. The dark blue line shows $\ell_{\rm cool} = c_{\rm s} \, t_{\rm cool}$, which is the expected minimum cold cloud size \cite{McCourt18} that we would want to resolve by at least several grid cells. The orange dashed line traces $R_{\rm CGM}$, the characteristic radius in the CGM at a given pressure from global CGM simulations \cite{Fielding17}. In order accurately model the multi-phase structure of the CGM it is necessary to include the dynamics on scales roughly $1/2 - 1/10 \ R_{\rm CGM}$. The range of scales necessary to capture, therefore, ranges from roughly a few 10s to a few 1000s. \label{fig:cs_tcool}}
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\textwidth}
+        \hspace{0.3cm} 
+        \includegraphics[width=1.1\textwidth]{../figures/length_scales_sim.pdf} 
+    \end{minipage}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.6\textwidth}
+        \includegraphics[width=0.975\textwidth]{../figures/velocity_P.pdf} 
+    \end{minipage}\hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+\caption{Characteristic values of the velocity dispersion (dark blue line; $\delta v = \sqrt{\langle v^2 \rangle - \langle v \rangle^2}$) and the sound speed (orange dashed line; $c_{\rm s}$) relative to the volume average pressure from global CGM simulations \cite{Fielding17}. The shaded regions trace the one sigma temporal variability around the median values over the full 9 Gyr duration of the simulation, thus demonstrating the need to study how the phase structure changes for different choices of the Mach number $\mathcal{M} = \delta v /  c_{\rm s}$. \label{fig:velocities}} 
+\end{minipage}
+\end{figure}
+
+
 
 \vspace{-.25in}
 \subsection{Results from Previous INCITE Awards and Relation to Current Proposal}
@@ -135,13 +177,16 @@ This section needs a lot of filling out. Basically, this is where we describe th
 \end{tabular}
 \end{table}
 
-
 \begin{figure}[h]
-\centering
-\includegraphics[width=4.52in, height=3.08in, keepaspectratio=true]{turbulence_logd}
-\includegraphics[width=4.52in, height=3.08in, keepaspectratio=true]{turbulence_logT}
-\caption{Placeholder figures.}
-\label{fig:turbulence}
+    \centering
+    \begin{minipage}{0.33\textwidth}
+%        \centering\vspace*{-.25cm}
+\caption{Two dimensional slice through a preliminary three dimensional local simulation showing the temperature of a small patch of CGM with a representative average density, temperature, and velocity field. This 1 kpc per side simulation demonstrates the rich multiphase structure that develops via turbulence and thermal instability on scales well below what is obtainable with cosmological zoom-in simulations. Accounting for this unresolved structure will bring global CGM simulations \cite{Fielding17} into agreement with observations. \label{fig:CGMpatch}}
+    \end{minipage}\hfill
+    \begin{minipage}{0.67\textwidth}
+        \hspace{0.3cm} 
+        \includegraphics[width=1.04\textwidth]{T_proposal.png} 
+    \end{minipage}
 \end{figure}
 
 \begin{table}[h]
@@ -422,6 +467,7 @@ While not strictly required for the simulations outlined in this proposal, condu
 \bibliographystyle{usrt}
 \renewcommand{\section}[2]{}
 \begin{thebibliography}{500}
+\bibitem{McCourt18} McCourt, M., et al. ``A characteristic scale for cold gas." {\em MNRAS}, {\bf 473}, 5407 (2018).
 \bibitem{Fielding17} Fielding, D., et al. ``The Impact of Star Formation Feedback on the Circumgalactic Medium." {\em MNRAS}, {\bf 466}, 3810 (2017).
 \bibitem{Godunov59} Godunov, S., ``A Difference Scheme for Numerical Solution of Discontinuous Solution of Hydrodynamic Equations.'' {\em Math. Sbornik}, {\bf 47}, 271 (1959)
 \vspace{-.09in}
