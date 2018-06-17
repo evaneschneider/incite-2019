@@ -170,7 +170,7 @@ These simulations will for the first time model the full phase structure of the 
 \subsection{Results from Previous INCITE Awards and Relation to Current Proposal}
 \vspace{-.2in}
 
-(Placeholder text. This section should be {\bf < 1 page}.)
+%(Placeholder text. This section should be {\bf < 1 page}.)
 
 (Evan will add more here.)
 
@@ -186,24 +186,61 @@ Previous awards include DD projects AST107 "Scaling the GPU-enabled Hydrodynamic
 
 %This section needs a lot of filling out. Basically, this is where we describe the set of simulations we plan to do, and why we're doing them. I've come up with a baseline set of simulations that I think we could do based on the computational time, and a baseline set of objectives and milestones. In describing the simulations, we should include density and temperature projections (I've put some that I generated in as placeholders at the moment). I think some of Drummond's density / temperature pdfs would be good in this section as well, to help describe the analysis we will do and how it relates to our research objectives.
 
-As the discussion in the previous section makes clear, understanding the phase structure of turbulent, pressurized astrophysical flows is key to modeling galaxies.  It is also computationally challenging, with the ratio of the injection scale to the cooling length of order $R_{\rm CGM}/\ell_{\rm cool} \approx 10^3$.  In this section, we describe a systematic plan to model idealized flows which can model these flows under conditions appropriate for our physical system.  First, we need to determine what resolution is required to converge on the properties of interest (object RO.A in Table~\ref{table:RO}).  As detailed earlier, we believe we know what range of scales are important, but it is not clear precisely how many cells across the cooling length $l_{\rm cool}$ are necessary, and how sensitive the results are to the largest scales modeled ($R_{\rm CGM}$).  Therefore, to begin, we will identify a fiducial simulation (with parameters typical of the Milky Way CGM), and carry out a convergence study.  Once the convergence requirements are set, we will systematically vary our key parameters: the mean pressure in the box and the velocity dispersion (Research Object RO.B).  Finally, we will use these results to connect back to the global galaxy simulations (and their cosmological cousins) by developing a simple physical model and generating observational predictions (Research Object RO.C).
-
+As the discussion in the previous section makes clear, understanding the phase structure of turbulent, pressurized astrophysical flows is key to modeling galaxies. However, adequately resolving this structure is computationally challenging, with the ratio of the energy injection scale to the cooling length of order $R_{\rm CGM}/\ell_{\rm cool} \approx 10^3$.  In this section, we describe a systematic plan to model these flows with conditions appropriate for a range of physical systems. First, we need to determine what resolution is required to converge on the properties of interest (object RO.A in Table~\ref{table:RO}).  As detailed earlier, we believe we know what range of scales are important, but it is not clear exactly how many cells across the cooling length $l_{\rm cool}$ are necessary to see convergence in the phase structure of the gas, nor do we know precisely how sensitive the results are to the largest scales modeled ($R_{\rm CGM}$).  Therefore, to begin, we will develop a fiducial simulation with parameters typical of the Milky Way CGM, and carry out a convergence study.  Once the convergence requirements are set, we will systematically vary our key parameters - the velocity dispersion and mean pressure in the box - in order to develop an understanding of the physical state of thermally unstable turbulent flows for a variety of environments (RO.B). Finally, we will use these results to connect back to the global galaxy simulations (and their cosmological cousins) by developing a simple physical model and generating observational predictions (RO.C and RO.D). We more fully outline the proposed project milestones (see Table~\ref{table:RM}) and their connections to these objectives in the following subsections.
 
 \begin{table}[h]
 %\centering
-\vspace{-.12in}
-\begin{tabular}{|l|l|} 
-\multicolumn{2}{l}{\bf{Table 1: Research Objectives}}\\
+%\vspace{-.12in}
+\caption{Research Objectives}
+\label{table:RO}
+\begin{tabular}{|l|l|}
+%\multicolumn{2}{l}{\bf{Table 1: Research Objectives}}\\
 \hline
-\textbf{RO.A} & Determine the effects of resolution on current numerical attempts to characterize the CGM. \\ \hline
-\textbf{RO.B} & Describe the physical nature (phase structure, cloud size scales, velocity coherence length etc.) \\
-& of gas in the circumgalactic medium for a range of physical pressures. \\ \hline
-\textbf{RO.C} & Develop a connection between the state of the CGM and other relevant galaxy properties, \\
-& both simulated and observable (e.g. halo mass, star-formation rate, etc.). \\
+\textbf{RO.A} & Determine the effects of numerical resolution on current attempts to characterize the CGM. \\ \hline
+\textbf{RO.B} & Describe the physical nature (phase structure, cloud sizes, velocity coherence length etc.) \\
+& of gas in thermally unstable flows as a function of turbulent mach number and pressure. \\ \hline
+\textbf{RO.C} & Develop a model that can characterize the unresolved CGM for implementation in  \\
+& isolated galaxy and cosmological simulations. \\ \hline
+\textbf{RO.D} & Identify relationships between the physical state of the CGM and other relevant galaxy \\ 
+& properties, both simulated and observable (e.g. halo mass, star-formation rate, etc.). \\
 \hline
 \end{tabular}
-\label{table:RO}
 \end{table}
+
+\begin{table}[h]
+%\centering
+%\vspace{-.12in}
+\caption{Research Milestones}
+\label{table:RM}
+\begin{tabular}{|l|p{4.7in}|p{0.9in}|l|} 
+%\multicolumn{3}{l}{\bf{Table 2: Research Milestones}}\\
+\hline
+\multicolumn{2}{|l|}{\bf Milestone} & {\bf Objective} \\ \hline
+\multicolumn{3}{|c|}{\it Quarter 1} \\ \hline
+\textbf{RM.A} & Develop "fiducial" turbulent CGM model and run baseline resolution study, including first petascale simulation of the CGM. & RO.A , RO.B \\ \hline
+\multicolumn{3}{|c|}{\it Quarter 2} \\ \hline
+\textbf{RM.B} & Run suite of moderate resolution turbulent box simulations at fixed CGM pressure and varying velocity dispersion. & RO.B, RO.C\\ \hline
+\multicolumn{3}{|c|}{\it Quarter 3} \\ \hline
+\textbf{RM.C} & Run additional extreme resolution simulations at varying CGM pressure as needed to resolve the cooling length. & RO.A, RO.B \\ \hline
+\multicolumn{3}{|c|}{\it Quarter 4} \\ \hline
+\textbf{RM.D} & Use results of parameter study to develop subgrid model for the unresolved CGM as a function of velocity dispersion and pressure. & RO.C \\ \hline
+\textbf{RM.E} & Compute ionization fractions for various species using results of all simulations for comparison with observational surveys of the CGM. & RO.D \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{-.25in}
+\subsection{RM.A: A Numerically Converged Model of the Milky Way CGM}
+\vspace{-.2in}
+
+Due to our privileged location within it, the Milky Way is the galaxy with the best-observed circumgalactic medium, and therefore provides the best single system with which to compare the results of our simulation campaign. The Milky Way is also a fairly "typical" galaxy in the local Universe, with a mass $M \sim 10^{12}\,M_\odot$ near the knee of the galaxy mass function at present day. Its CGM pressure is likely to be intermediate in the range of interesting pressures we will study, from the lowest pressure systems (dwarf galaxies), to the highest pressure systems (high mass elliptical galaxies or potentially clusters). Hence, Milky Way-like parameters are a logical choice for our fiducial model of the CGM and associated convergence study.
+
+Our best observational constraints on the Milky Way's CGM are from relatively small radii, where the injection scale of turbulent energy (likely from star formation driven outflows) is a large fraction of the scale length of the galactic disk, $R_d = 8$ kpc. In order to drive turbulence at approximately this scale, we require a box with side lengths at least $L_\mathrm{box} = 1\,\mathrm{kpc}^{3}$. The associated CGM pressure at these radii may be quite high, especially if hot, supernova-driven outflows are contributing ($P/k_\mathrm{k_B} \sim 10^3\,\mathrm{K}\,\mathrm{cm}^{-3}$). This drives the relevant length scale for the pressure-confined, thermally-unstable cool clouds to a small number, of order a few to a few 10's of parsecs (see Figure 2). To demonstrate convergence of the properties of the CGM for this fiducial case will thus require a simulation with the ability to resolve this scale with several cells (the typical number is 4 to adequately resolve gas that is fragmenting as a result of gravitational instability, a similar process \cite{Truelove}).
+
+In Quarter 1 of our project, we propose to carry out a convergence study of the properties of this fiducial model by simulating a turbulent box 1 kpc on a side, with progressively increasing resolution. These simulations will range in numerical resolution from our lowest-resolution tests with $128^3$ cells ($\Delta x = 8\,\mathrm{pc}$), to the highest resolution simulation with $4096^3$ cells ($\Delta x = 0.25\,\mathrm{pc}$). This highest resolution will be sufficient to demonstrate convergence down to a cool cloud scale of $2\,\mathrm{pc}$ if the clouds must be resolved by 4 cells (2 pc / 0.25 pc = the 8 cells required to see convergence). In addition to providing valuable scientific insight, this simulation will also carry its own significance as the first petascale simulation of the circumgalactic medium.
+
+Figure~\ref{fig:CGMpatch} shows a temperature slice through a low-resolution test calculation that demonstrates our fiducial setup. In this simulation, turbulence is driven on large scales, with modes up to $k = ??$. Energy is injected at each time step, at a rate set to balance the total energy that is radiated away by the cooling gas (see Section 3.4 for more information about our turbulent driving). As density inhomogeneities develop, the denser gas radiates away thermal energy more quickly, while the maintenance of pressure balance between phases compresses these clumps to even higher densities, fueling the instability. The result is a rich temperature and density structure characterized by many small clouds of dense gas entrained within a hot, turbulent medium.
+
+Need to add something about the timescale of the simulations - run for 3 cooling times (is $t_\mathrm{cool}$ defined in Section 1? If not define it here).
 
 \begin{figure}[h]
     \centering
@@ -217,34 +254,36 @@ As the discussion in the previous section makes clear, understanding the phase s
     \end{minipage}
 \end{figure}
 
-\begin{table}[h]
-%\centering
-\vspace{-.12in}
-\begin{tabular}{|l|p{4.6in}|l|} 
-\multicolumn{3}{l}{\bf{Table 2: Research Milestones}}\\
-\hline
-\multicolumn{2}{|l|}{\bf Milestone} & {\bf Objective} \\ \hline
-\multicolumn{3}{|c|}{\it Quarter 1} \\ \hline
-\textbf{RM.A} & Develop "fiducial" turbulent CGM model and run resolution study, including first petascale simulation of the CGM. & RO.A , RO.B \\ \hline
-\multicolumn{3}{|c|}{\it Quarter 2} \\ \hline
-\textbf{RM.B} & Run suite of moderate resolution turbulent box simulations to explore relevant parameter space. & RO.B, RO.C\\ \hline
-\multicolumn{3}{|c|}{\it Quarter 3} \\ \hline
-\textbf{RM.C} & Run additional extreme resolution models (as informed by parameter study) to produce a state-of-the-art suite of numerical simulations to be used for comparison to observational and theoretical models of the circumgalactic medium. & RO.A, RO.B, RO.C \\ 
-\hline
-\end{tabular}
-\end{table}
 
 \vspace{-.25in}
-\subsection{Heading 2 (optional)}
+\subsection{RM.B, C: How Velocity Dispersion and Pressure Affect the Phase Structure of the CGM}
 \vspace{-.2in}
 
-Insert paragraph(s).
+As demonstrated in low resolution idealized simulations of the CGM, the turbulent mach number of the hot medium is not a constant function of radius \cite{Fielding17}. Typically, the processes driving turbulence (e.g. star formation feedback and winds) are most effective at small radii, leading to a distribution of mach numbers that peaks around 2 close in to galaxies and falls off to < 1 in the outer regions of halos (although we note that these are time and radially-averaged numbers, there may still be supersonic turbulent driving at large radii at discrete intervals). Thus, in order to fully describe gas within the halo even of a single system with a given halo mass, we must simulate the CGM with a range of different velocity dispersions. Similarly, the pressure in the CGM is likely to vary as a function of both radius with the halo, and galaxy halo mass. To adequately characterization the full range of circumgalactic media that have been observed (and are relevant to cosmological simulations) will therefore require simulations across a range of CGM pressures, as well. Our second and third milestones will achieve this, as we carry out a parameter study across these two variables.
+
+We would like to isolate the effects of velocity dispersion and mach number separately, as this will make it easier to build a subgrid model of unresolved CGM structure. The first piece of our parameter study will focus on the effects of the turbulent mach number, as we run a series of simulations at fixed CGM pressure and scale the turbulent injection energy across the relevant range. In general, increasing the mach number of the turbulence will increase the width of the density pdf, and therefore will change the amount of cool gas we expect to find populating the high density / low temperature tail of the distribution (Figure ~\ref{fig:dMdlogT}). Based on the results of our convergence study (RM.A), we will know what resolution is required to adequately resolve the phase structure of the gas. We will therefore be able to pick an appropriate pressure for this velocity dispersion study such that a set of moderate resolution simulations ($N = 2048^3$ cells) will be fully converged. Our initial anticipation is that this pressure will be similar to that of the Milky Way CGM, in which case we expect to be able to be able to characterize the CGM of our galaxy at a range of radii from the innermost halo out to the virial radius - a data set that will be invaluable for comparison to observations. Depending on the exact time step requirements (see Section 3.1), we anticipate carrying out 6 of these simulations in Quarter 2.
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.33\textwidth}
+%        \centering\vspace*{-.25cm}
+\caption{A density pdf derived from the test simulation shown in Figure \ref{fig:CGMpatch}. The buildup of structure in the low temperature tail is a process that depends on both the turbulent mach number of the high temperature medium as well as the mean pressure. At low resolutions (such as this test calculation), the structure in this high density tail is incomplete, and in galaxy-scale or cosmological simulations it is completely unresolved. \label{fig:dMdlogT}}
+    \end{minipage}\hfill
+    \begin{minipage}{0.67\textwidth}
+        \hspace{0.3cm} 
+        \includegraphics[width=1.04\textwidth]{../figures/dMdlogT_00317.png} 
+    \end{minipage}
+\end{figure}
+
+Once we have developed an understanding of the effects of the velocity dispersion, we will turn to the pressure dependence of the CGM properties. As demonstrated in Figure~\ref{fig:cs_tcool}, we expect the pressure of the confining medium to be the primary factor that sets the length scale of the cool clouds embedded within it. To characterize this dependence, we will carry out a suite of simulations similar to those described in the previous paragraph, but this time at constant mach number while varying the pressure. Because the resolution requirement is expected to scale with the size of the cool clouds, the highest pressure simulations will also be the most computationally demanding, with CGM pressures of $P/k_B \sim 1000$ likely requiring $N = 4096^3$ cells to be fully resolved. On the other hand, while the lower pressure simulations will have less strict resolution requirements, the lower average density of the gas will increase the associated cooling time ($t_\mathrm{cool} \propto n^{-2}$), while the physical time step set by the intermediate temperature gas remains the same, so these simulations will need to run for much longer in order for the phase structure to equilibrate. Both the high and low pressure simulations are thus expected to require petascale resources to be converged (see Section 3.1).
+
 
 \vspace{-.25in}
-\subsubsection{Heading 3 (optional)}
+\subsection{RM.D, E: Connections to Cosmological Simulations and Current Surveys}
 \vspace{-.2in}
 
-Insert paragraph(s).
+The simulations described above will be carried out during the first three quarters of the project, in order to be completed by the anticipated shut down of the Titan system in September 2019. However, much of the value of this project will be in the detailed analyses of these proposed simulations, which can be carried out on the Rhea cluster both during and after the simulation campaign is complete. We consider these analyses to be the final milestones of the project - the development of a subgrid model for the CGM, and the computation of the ionization fractions of various chemical species for direct comparison with observations of gas in the CGM.
+
 
 \vspace{-.25in}
 \section{COMPUTATIONAL READINESS}
@@ -256,7 +295,7 @@ Insert paragraph(s).
 %\item Specific architectural needs that can only be met by the LCF.
 %\end{itemize}
 %\vspace{.1 in}
-Placeholder text. This section, including the following subsections, is typically about \textbf{5 pages}.
+%This section, including the following subsections, is typically about \textbf{5 pages}.
 
 \vspace{-.25in}
 \subsection{Use of Resources Requested}
@@ -324,13 +363,15 @@ our calculations will use the GPU-native code {\tt Cholla}, each of these simula
 
 \begin{table}[h]
 %\centering
-\vspace{-.12in}
+%\vspace{-.12in}
+\caption{Research Simulations}
+\label{table:RS}
 \begin{tabular}{|l|p{2in}|p{1in}|p{0.7in}|p{0.5in}|p{0.7in}|} 
-\multicolumn{6}{l}{\bf{Table 3: Research Simulations}}\\
+%\multicolumn{6}{l}{\bf{Table 3: Research Simulations}}\\
 \hline
 \multicolumn{2}{|l|}{\bf Simulation Type and Details} & {\bf Objective / Milestone} & {\bf Resolution} & {\bf Titan Nodes} & {\bf Titan Node Hours} \\ \hline
 \multicolumn{6}{|c|}{\it Quarter 1: 0.5M node hours} \\ \hline
-\textbf{RS.A} & Fiducial CGM Petascale Simulation and Resolution Study & RO.A, RO.B & $N=1024^3$ & 8 - 16,384 & 0.5M\\ \hline
+\textbf{RS.A} & Fiducial Milky Way CGM Simulation and Petascale Resolution Study & RO.A, RO.B & $N = 128^3$ to $N=4096^3$ & 1 to 16,384 & 0.5M\\ \hline
 \multicolumn{6}{|c|}{\it Quarter 2: 0.7M node hours} \\ \hline
 \textbf{RS.B - M} & Parameter Study, set of 12 moderate resolution simulations & RO.B, RO.C & $N=2048^3$ & 4096 & 0.7M\\ \hline
 \multicolumn{6}{|c|}{\it Quarter 3: 1.5M node hours} \\ \hline
