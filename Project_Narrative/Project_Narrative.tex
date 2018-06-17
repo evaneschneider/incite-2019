@@ -94,20 +94,24 @@ is the sensitivity of the ions used as observational CGM tracers to small change
 \begin{figure}[t]
     \centering
     \begin{minipage}{0.6\textwidth}
-        \includegraphics[width=0.975\textwidth]{../figures/dMdlogT_picture_ion_all_P100_broad_narrow_3in.pdf} 
+        \includegraphics[width=\textwidth]{../figures/dMdlogT_picture_ion_all_P100_broad_narrow_3in.pdf} 
     \end{minipage}\hfill
     \begin{minipage}{0.4\textwidth}
         \centering
-\caption{\textit{Top}: Phase distribution showing the contribution from the virialized, cooling, and cold components. The sensitivity of the coldest phase to resolution and microphysics lead to changes in its distribution. \textit{Bottom}: Ion fraction for various ions that are or can be observed in the CGM of low redshift galaxies assuming they are at a pressure of $P/k_B = 100\,\mathrm{K\,cm}^{-3}$. Small changes to the phase structure at low temperatures can have a major impact on the integrated ion column densities and therefore the inferred CGM properties.\label{fig:multiphase}} 
+\caption{\textit{Top}: Phase distribution showing the contribution from the virialized, cooling, and cold components. The sensitivity of the coldest phase to resolution and microphysics lead to changes in its distribution. \textit{Bottom}: Ion fraction for various ions that are or can be observed in the CGM of low redshift galaxies assuming they are at a pressure of $P/k_B = 100\,\mathrm{K\,cm}^{-3}$. Small changes to the phase structure at low temperatures can have a major impact on the observed ion column densities and therefore the inferred CGM properties.\label{fig:multiphase}} 
 \end{minipage}
 \end{figure}
 
 
 %Because the CGM is extremely dilute and can only be detected in absorption when there is a chance alignment of a bright background source the observational picture is far from complete. Nevertheless, these discrete pencil-beam windows into the properties of the halo gas can be illuminating. These observations typically yield a measurement of the amount of a given ion along the line of sight, quantified by the column density $N_{\rm ion} = \int n_{\rm ion} ds$, as well as the velocity of the absorbing gas. In recent years much work has been devoted to measuring how these properties relate to the property of the host galaxy. These observational studies have demonstrated a close relationship between key galactic properties such as stellar mass and star formation rate and the properties of the CGM [cite] highlighting the integral role of the CGM in galaxy formation. 
 
-The high observed occurrence rate of cold gas at large radii in galactic halos presents a difficult theoretical challenge. There is indirect evidence that the cold gas being probed by these observations resides in clouds vastly smaller than can be resolved in the even the most cutting-edge high resolution cosmological simulations. Much of this evidence is derived by comparing the observed column density of an ion to a model for its volume density the ratio of which yields a characteristic spatial scale $\ell = N/n$ usually on the order of a few tens of pc. Additionally, rare close pairs or gravitationally lensed multiply imaged of background sources also show sizable differences on scales on the order of a kpc or less. 
+There is reason to believe that the cold phase of the CGM resides primarily in small clumps ($\ll 1$ kpc).  From an observational stand point this is supported by the fact that cold gas properties are seen to vary over very small length scales in close quasar pairs and gravitationally lensed quasars \cite{Rauch02, Churchill03, Lopez18}, and that standard photoionization modeling favor high volume densities \cite{Werk14,Lau16}. While theoretically it has been shown that thermal instability saturates to a state in which cold clouds embedded within a confining hot medium have a characteristic size $\ell_{\rm cool} = c_{\rm s}\, t_{\rm cool}$. Physically this can be understood as the maximum size a cloud can have and still maintain pressure equilibrium \cite{McCourt18}. 
 
-There is, in fact, a theoretical reason to believe that cold gas should reside in small clouds. As an over dense region in the CGM begins to cool out of the ambient hot medium the gas will try to maintain pressure equilibrium. Pressure equilibrium can only be maintained if the sound crossing time, $r_{\rm cloud}/c_{\rm s}$ the time on which pressure is readjusted, is less than the cooling time $t_{\rm cool}$. Therefore as the region cools it will break up into smaller and smaller clouds that maintain this balance of time scales. Eventually as the gas approaches the temperature where cooling becomes inefficient the cooling time increases and breaking up any smaller is no longer beneficial to maintaining pressure equilibrium. The clouds therefore will reach a characteristic size scale roughly equal to the minimum of value of $c_{\rm s}\, t_{\rm cool}$ for the pressure of the confining hot medium, which we refer to as $\ell_{\rm cool}$ \cite{McCourt18}. This length scale ranges from a kpc at low pressures to a fraction of a pc at small scales. 
+
+
+%The high observed occurrence rate of cold gas at large radii in galactic halos presents a difficult theoretical challenge. There is indirect evidence that the cold gas being probed by these observations resides in clouds vastly smaller than can be resolved in the even the most cutting-edge high resolution cosmological simulations. Much of this evidence is derived by comparing the observed column density of an ion to a model for its volume density the ratio of which yields a characteristic spatial scale $\ell = N/n$ usually on the order of a few tens of pc. Additionally, rare close pairs or gravitationally lensed multiply imaged of background sources also show sizable differences on scales on the order of a kpc or less. 
+
+%There is, in fact, a theoretical reason to believe that cold gas should reside in small clouds. As an over dense region in the CGM begins to cool out of the ambient hot medium the gas will try to maintain pressure equilibrium. Pressure equilibrium can only be maintained if the sound crossing time, $r_{\rm cloud}/c_{\rm s}$ the time on which pressure is readjusted, is less than the cooling time $t_{\rm cool}$. Therefore as the region cools it will break up into smaller and smaller clouds that maintain this balance of time scales. Eventually as the gas approaches the temperature where cooling becomes inefficient the cooling time increases and breaking up any smaller is no longer beneficial to maintaining pressure equilibrium. The clouds therefore will reach a characteristic size scale roughly equal to the minimum of value of $c_{\rm s}\, t_{\rm cool}$ for the pressure of the confining hot medium, which we refer to as $\ell_{\rm cool}$ \cite{McCourt18}. This length scale ranges from a kpc at low pressures to a fraction of a pc at small scales. 
 
 \begin{figure}[t]
     \centering
@@ -115,21 +119,21 @@ There is, in fact, a theoretical reason to believe that cold gas should reside i
 	\caption{ The largest and smallest relevant length scales as a function of pressure. The dark blue line shows $\ell_{\rm cool} = c_{\rm s} \, t_{\rm cool}$, which is the expected minimum cold cloud size \cite{McCourt18} that we would want to resolve by at least several grid cells. The orange dashed line traces $R_{\rm CGM}$, the characteristic radius in the CGM at a given pressure from global CGM simulations \cite{Fielding17}. In order to accurately model the multi-phase structure of the CGM it is necessary to include the dynamics on scales roughly $1/2 - 1/10 \ R_{\rm CGM}$. The range of scales necessary to capture, therefore, ranges from roughly a few 10s to a few 1000s. \label{fig:cs_tcool}}
     \end{minipage}\hfill
     \begin{minipage}{0.55\textwidth}
-        \hspace{0.3cm} 
-        \includegraphics[width=1.1\textwidth]{../figures/length_scales_sim.pdf} 
+        \includegraphics[width=\textwidth]{../figures/length_scales_sim.pdf} 
     \end{minipage}
 \end{figure}
 
 
+The small expected sizes of these clumps may explain the observed order unity cold gas covering fraction because for fixed cold gas mass a large number of small clouds has a higher covering fraction than a small number of large clouds. Additionally, small clouds can be more easily entrained by the hot medium due to their small surface area to volume ratio. Efficient entrainment would prevent the clouds from immediately "raining out" due to their reduced buoyancy. Estimates of the implied accretion rate onto the galaxies if the cold gas does rain out is orders of magnitude larger than the observed star formation rate and would, as a result, require vast amounts of heating \cite{McQuinnWerk}. This is particularly problematic in the case of the cold gas observed around quiescent galaxies. This difficulty is mollified if the cold gas is instead long lived and stays roughly where it formed due to efficient entrainment.
 
+The initial seeding of the perturbations that lead to these small cold clouds must by dint of the large observed covering fraction of cold gas in the CGM take place throughout the halo. Moreover, because the present day star formation rates are significantly less than the accretion rates into the CGM from the IGM the bulk of the CGM must be quasi-static. Therefore the cooling that leads to the development of the cold clouds must be balanced by some form of heating. Turbulence in the CGM provides a natural explanation to both of these problems. The compressive modes of a turbulent flow lead to density enhancements and the dissipation of the turbulent kinetic energy can offset cooling. Moreover, CGM turbulence is observed via the broad line widths in the absorption spectra and expected theoretically to be driven by the winds emanating from galaxies and from the stirring by satellite galaxies. 
 
-The small expected sizes of these clumps helps in the interpretation of the observations because a large number of small clouds can more easily match the large covering fraction than a small number of large clouds for the same cold gas mass. Additionally, small clouds can be more easily entrained by the hot medium due to their small surface area to volume ratio. Efficient entrainment would prevent the clouds from immediately "raining out" due to their reduced buoyancy. Estimates of the implied accretion rate onto the galaxies if the cold gas does rain out is orders of magnitude larger than the observed star formation rate and would, as a result, require vast amounts of heating \cite{McQuinnWerk}. This is particularly problematic in the case of the cold gas observed around quiescent galaxies. This difficulty is mollified if the cold gas is instead long lived and stays roughly where it formed due to efficient entrainment.
+Controlled global-scale simulations of the CGM have shown that kinetic energy injected by galactic winds and the subsequent turbulent dissipation heating can sufficiently limit halo cooling \cite{Fielding17}. The resulting halos are roughly hydrostatic and the star formation rates are dramatically reduced relative to intergalactic accretion rates. The phase structure (and, as a result, the mock observations) demonstrated a marked dependence on the pressure (set by the location in the halo and the dark matter halo mass) and the velocity dispersion (related to the strength of the galactic feedback). This reflects the competition between cooling (pressure-dependent) and turbulent mixing (velocity-dependent) in determining the phase balance.
+Although these models successfully explain many of the bulk CGM properties, the low temperature end of the phase structure never converged numerically even when the resolution was pushed to $\sim 100$ pc---the highest resolution global scale CGM simulation to date. 
 
-The initial seeding of the perturbations that lead to these small cold clouds must by dint of the large observed covering fraction of cold gas in the CGM take place throughout the halo. Moreover, because the present day star formation rates are significantly less than the accretion rates into the CGM from the IGM the bulk of the CGM must be quasi-static. Therefore the cooling that leads to the development of the cold clouds must be balanced by some form of heating. Turbulence in the CGM provides a natural explanation to both of these problems. The compressive modes of a turbulent flow lead to density enhancements and the dissipation of the turbulent kinetic energy can offset cooling. CGM turbulence is observed via the broad line widths in the absorption spectra and expected theoretically to be driven by the winds emanating from galaxies and from the stirring by satellite galaxies. 
+We propose to study the turbulent thermal instability in the CGM at unprecedented resolution. The range of scales in this problem is challenging because it is necessary to resolve both the large-scale turbulent properties and the small-scale cold clouds. Fig. \ref{fig:cs_tcool} shows the expected range of scales for a range of pressures relevant to the CGM (and to the ICM and ISM in some limits). Turbulence is driven on scales roughly equal to size of the region, so for a given pressure we estimate the driving scale to be (a fraction of) the radius of the CGM that has that characteristic pressure. This ranges from a few hundred kpc for the lowest pressures at the outskirts of the halo to roughly 10 kpc in the high pressure inner halo. To accurately model the cold phase we must resolve $\ell_{\rm cool}$, which scales more strongly with pressure than the turbulent driving scale. In the inner CGM this leads to a range of scales of $\sim10^3$, while in the outer lower pressure halo the requirements are less stringent.
 
-We propose to study this turbulent thermal instability in the CGM. The range of scales in this problem is challenging because it is necessary to resolve both the large-scale turbulent properties and the small-scale cold clouds. Fig. \ref{fig:cs_tcool} shows the expected range of scales for a range of pressures relevant to the CGM (and to the ICM and ISM in some limits). Turbulence is driven on scales roughly equal to size of the region, so for a given pressure we estimate the driving scale to be (a fraction of) the radius of the CGM that has that characteristic pressure. This ranges from a few hundred kpc for the lowest pressures at the outskirts of the halo to roughly 10 kpc in the high pressure inner halo. To accurately model the cold phase we must resolve $\ell_{\rm cool}$, which scales more strongly with pressure than the turbulent driving scale. In the inner this leads to a range of scales of roughly $10^3$ at least while in the outer lower pressure halo the requirements are less stringent.
-
-These simulations will for the first time model the full phase structure of the CGM in a fully resolved sense. This will have major implications for the interpretation of ever growing body of observations and will unlock the potential of using the CGM as a probe of fundamental galaxy formation physics. Furthermore, given the potential impact of multiphase cooling on the dynamics and evolution of halo gas these simulations will provide the ideal basis to develop a sub-grid model for the unresolved CGM phases in global scale cosmological simulations as has been used for the ISM for decades \cite{Some hernquist paper i forget}.
+These simulations will for the first time model the full phase structure of the CGM in a fully resolved sense. This will have major implications for the interpretation of ever growing body of observations and will unlock the potential of using the CGM as a probe of fundamental galaxy formation physics. Furthermore, given the potential impact of multiphase cooling on the dynamics and evolution of halo gas these simulations will provide the ideal basis to develop a sub-grid model for the unresolved CGM phases in global scale cosmological simulations as has been used for the ISM for decades \cite{SpringelHernquist}.
 
 %(Placeholder text. This section should be about {\bf 2 pages}.)
 
@@ -144,36 +148,6 @@ These simulations will for the first time model the full phase structure of the 
 %\item{What will be gained from the study.}
 %\item{Additional benefits to the community (e.g. better physical understanding of CGM phase structure to inform observations, subgrid model for cosmological simulations, etc..}
 %\end{itemize}
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=4.52in, height=3.08in, keepaspectratio=true]{cs_tcool_P_T_3.png}
-%\caption{This figure justifies our resolution requirements. Would be nice to have the minimum length scale in one panel (as shown), and a figure justifying the box size in another panel (if we can think of an appropriate figure).}
-%\label{Fig1}
-%\end{figure}
-
-
-\begin{figure}[h]
-    \centering
-    \begin{minipage}{0.6\textwidth}
-        \includegraphics[width=0.975\textwidth]{../figures/velocity_P.pdf} 
-    \end{minipage}\hfill
-    \begin{minipage}{0.4\textwidth}
-        \centering
-\caption{Characteristic values of the velocity dispersion (dark blue line; $\delta v = \sqrt{\langle v^2 \rangle - \langle v \rangle^2}$) and the sound speed (orange dashed line; $c_{\rm s}$) relative to the volume average pressure from global CGM simulations \cite{Fielding17}. The shaded regions trace the one sigma temporal variability around the median values over the full 9 Gyr duration of the simulation, thus demonstrating the need to study how the phase structure changes for different choices of the Mach number $\mathcal{M} = \delta v /  c_{\rm s}$. \label{fig:velocities}} 
-\end{minipage}
-\end{figure}
-
-
-\begin{figure}[t]
-    \centering
-    \begin{minipage}{0.45\textwidth}
-	\caption{  dM / dlogT from sims \label{fig:sim_phase}}
-    \end{minipage}\hfill
-    \begin{minipage}{0.55\textwidth}
-        \includegraphics[width=1.\textwidth]{dMdlogT_proposal_t.pdf} 
-    \end{minipage}
-\end{figure}
 
 
 
@@ -200,6 +174,40 @@ Previous awards include DD projects AST107 "Scaling the GPU-enabled Hydrodynamic
 
 As the discussion in the previous section makes clear, understanding the phase structure of turbulent, pressurized astrophysical flows is key to modeling galaxies.  It is also computationally challenging, with the ratio of the injection scale to the cooling length of order $R_{\rm CGM}/\ell_{\rm cool} \approx 10^3$.  In this section, we describe a systematic plan to model idealized flows which can model these flows under conditions appropriate for our physical system.  First, we need to determine what resolution is required to converge on the properties of interest (object RO.A in Table~\ref{table:RO}).  As detailed earlier, we believe we know what range of scales are important, but it is not clear precisely how many cells across the cooling length $l_{\rm cool}$ are necessary, and how sensitive the results are to the largest scales modeled ($R_{\rm CGM}$).  Therefore, to begin, we will identify a fiducial simulation (with parameters typical of the Milky Way CGM), and carry out a convergence study.  Once the convergence requirements are set, we will systematically vary our key parameters: the mean pressure in the box and the velocity dispersion (Research Object RO.B).  Finally, we will use these results to connect back to the global galaxy simulations (and their cosmological cousins) by developing a simple physical model and generating observational predictions (Research Object RO.C).
 
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.6\textwidth}
+        \includegraphics[width=\textwidth]{../figures/velocity_P.pdf} 
+    \end{minipage}\hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+\caption{Characteristic values of the velocity dispersion (dark blue line; $\delta v = \sqrt{\langle v^2 \rangle - \langle v \rangle^2}$) and the sound speed (orange dashed line; $c_{\rm s}$) relative to the volume average pressure from global CGM simulations \cite{Fielding17}. The shaded regions trace the one sigma temporal variability around the median values over the full 9 Gyr duration of the simulation, thus demonstrating the need to study how the phase structure changes for different choices of the Mach number $\mathcal{M} = \delta v /  c_{\rm s}$. \label{fig:velocities}} 
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.35\textwidth}
+\caption{Two dimensional slice through a preliminary three dimensional local simulation showing the temperature of a small patch of CGM with a representative average density, temperature, and velocity field. This 1 kpc per side simulation demonstrates the rich multiphase structure that develops via turbulence and thermal instability on scales well below what is obtainable with cosmological zoom-in simulations. Accounting for this unresolved structure will bring global CGM simulations \cite{Fielding17} into agreement with observations. \label{fig:CGMpatch}}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=\textwidth]{T_proposal.png} 
+    \end{minipage}
+\end{figure}
+
+
+\begin{figure}[t]
+    \centering
+    \begin{minipage}{0.625\textwidth}
+        \includegraphics[width=1.\textwidth]{dMdlogT_proposal_t.pdf} 
+    \end{minipage}\hfill
+    \begin{minipage}{0.375\textwidth}
+	\caption{  The amount of mass per logarithmic temperature bin $dM / d\log T$ from a preliminary turbulent thermal instability simulations shown at $t = 0.1,1,2,$ and $3$ times the cooling time of the hot phase, $t_{\rm cool,hot}$. The gray shaded region shows range during $ 2.5 \leq t / t_{\rm cool,hot} \leq 3.5$ highlighting the relatively small degree of variation around the steady state distribution. The final distribution shows a clear cooling phase with $dM / d\log T \propto t_{\rm cool} \propto T^2$ between $3\times10^4$ and $3\times10^5$ K, as well as a pile-up at $T\sim10^4$ K. \label{fig:sim_phase}}
+    \end{minipage}
+
+\end{figure}
+
 
 \begin{table}[h]
 %\centering
@@ -216,18 +224,6 @@ As the discussion in the previous section makes clear, understanding the phase s
 \end{tabular}
 \label{table:RO}
 \end{table}
-
-\begin{figure}[h]
-    \centering
-    \begin{minipage}{0.33\textwidth}
-%        \centering\vspace*{-.25cm}
-\caption{Two dimensional slice through a preliminary three dimensional local simulation showing the temperature of a small patch of CGM with a representative average density, temperature, and velocity field. This 1 kpc per side simulation demonstrates the rich multiphase structure that develops via turbulence and thermal instability on scales well below what is obtainable with cosmological zoom-in simulations. Accounting for this unresolved structure will bring global CGM simulations \cite{Fielding17} into agreement with observations. \label{fig:CGMpatch}}
-    \end{minipage}\hfill
-    \begin{minipage}{0.67\textwidth}
-        \hspace{0.3cm} 
-        \includegraphics[width=1.04\textwidth]{T_proposal.png} 
-    \end{minipage}
-\end{figure}
 
 \begin{table}[h]
 %\centering
@@ -531,6 +527,17 @@ While not strictly required for the simulations outlined in this proposal, condu
 \vspace{-.09in}
 \bibitem{Steidel10} Steidel, C., et al. ``The Structure and Kinematics of the Circumgalactic Medium from Far-ultraviolet Spectra of z~=2-3 Galaxies.'' {\em ApJ}, {\bf 717}, 289 (2010)
 \bibitem{Tumlinson17} Tumlinson, J., Peeples, M.~S., \& Werk, J.~K.\ 2017,  ``The Circumgalactic Medium", {\em ARAA}, 55, 389 
+
+\bibitem{Churchill03} Churchill, C. et al. ``The Spatial, Ionization, and Kinematic Conditions of the z=1.39 Damped Ly? Absorber in Q0957+561A, B'' {\em ApJ}, {\bf 593}, 203 (2003) 
+
+\bibitem{Rauch02} Rauch, M. et al.  ``Small-Scale Structure at High Redshift. IV. Low-Ionization Gas Intersecting Three Lines of Sight to Q2237+0305'' {\em ApJ}, {\bf 576}, 54 (2002)
+
+\bibitem{Lopez18} Lopez, S. et al. ``A clumpy and anisotropic galaxy halo at redshift 1 from gravitational-arc tomography'', {\em Nature}, {\bf 554}, 493 (2018)
+
+\bibitem{McQuinnWerk} McQuinn, M. \& Werk, J. ``Implications of the Large O VI Columns around Low-redshift L ? Galaxies'', {\em ApJ}, {\bf 852}, 33, (2018)
+
+
+\bibitem{SpringelHernquist} Springel, V. \& Hernquist, L. ``Cosmological smoothed particle hydrodynamics simulations: a hybrid multiphase model for star formation'', {\rm MNRAS}, {\bf 339}, 289 (2003)
 \vspace{-.09in}
 \end{thebibliography}
 }
