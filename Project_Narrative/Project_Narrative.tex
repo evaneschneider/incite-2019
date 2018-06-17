@@ -297,7 +297,7 @@ The simulations described above will be carried out during the first three quart
 %\vspace{.1 in}
 %This section, including the following subsections, is typically about \textbf{5 pages}.
 
-\vspace{-.25in}
+%\vspace{-.25in}
 \subsection{Use of Resources Requested}
 \vspace{-.2in}
 
@@ -335,6 +335,8 @@ The simulations described above will be carried out during the first three quart
 %ALCF:  {\href{http://www.alcf.anl.gov/user-guides/data-policy}{http://www.alcf.anl.gov/user-guides/data-policy}}
 %\end{enumerate}
 %\end{enumerate}
+
+In this section we detail the computational requirements for the simulations described in Section 2. 
 
 Our program for simulating the CGM requires two classes of simulations - petascale simulations where we fully resolve the minimum length scale set by thermal instability, as well as a set of moderate-resolution simulations that will allows us to sample the parameter space of CGM conditions. We note that while we refer to them as moderate resolution, these simulations will still be orders of magnitude better resolution than any previous simulations of the CGM, and therefore will provide highly valuable scientific content. Since all of
 our calculations will use the GPU-native code {\tt Cholla}, each of these simulations will require large numbers of GPUs (4096--16,384) as provided by the Titan XK7 system.
