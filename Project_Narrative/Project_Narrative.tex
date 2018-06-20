@@ -337,11 +337,13 @@ The simulations described above will be carried out during the first three quart
 %\end{enumerate}
 %\end{enumerate}
 
-In this section we detail the computational requirements for the simulations described in Section 2.
+In this section we detail the computational and data requirements for the simulations described in Section 2. Since all of our calculations will use the GPU-native code {\tt Cholla}, each of these simulations will require large numbers of GPUs (4096--16,384) as provided by the Titan XK7 system. 
 
-Our program for simulating the CGM requires two classes of simulations - petascale simulations where we fully resolve the minimum length scale set by thermal instability, as well as a set of moderate-resolution simulations that will allows us to sample the parameter space of CGM conditions. We note that while we refer to them as moderate resolution, these simulations will still be orders of magnitude better resolution than any previous simulations of the CGM, and therefore will provide highly valuable scientific content. Since all of our calculations will use the GPU-native code {\tt Cholla}, each of these simulations will require large numbers of GPUs (4096--16,384) as provided by the Titan XK7 system.
 
-(Evan will add more here.)
+\subsubsection{Time Allocation Request and Justification}
+
+
+We have outlined the total time request for our proposed production simulations in Table~\ref{table:RS}. Here we will provide a detailed description of the fiducial Milky Way CGM convergence study, our first research milestone. As described in Section 2, this study will require simulations at a range of resolutions, from $128^3$ cells to $4096^3$. From a practical standpoint, only the two highest resolution simulations require a significant number of node hours. We therefore begin by explaining the node-hour calculation for the $2048^3$ simulation, and then the $4096^3$.
 
 %Grid size = 2048x2048x2048
 %4096 GPUS
@@ -351,7 +353,7 @@ Our program for simulating the CGM requires two classes of simulations - petasca
 %dt = 1ky?
 %each time step ~500ms
 %cooling time ~30 Myr
-%node hours for 100 Myr = 0.415*1e5*4096 = 56,889 node-hours
+%node hours for 100 Myr = 0.5*1e5*4096 = 56,889 node-hours
 
 %Grid size = 4096x4096x4096
 %16,384 GPUS
@@ -368,18 +370,30 @@ Our program for simulating the CGM requires two classes of simulations - petasca
 %\vspace{-.12in}
 \caption{Research Simulations}
 \label{table:RS}
-\begin{tabular}{|l|p{2in}|p{1in}|p{0.7in}|p{0.5in}|p{0.7in}|} 
+\begin{tabular}{|p{2in}|p{1in}|p{0.7in}|p{0.5in}|p{0.7in}|} 
 %\multicolumn{6}{l}{\bf{Table 3: Research Simulations}}\\
 \hline
-\multicolumn{2}{|l|}{\bf Simulation Type and Details} & {\bf Objective / Milestone} & {\bf Resolution} & {\bf Titan Nodes} & {\bf Titan Node Hours} \\ \hline
-\multicolumn{6}{|c|}{\it Quarter 1: 0.5M node hours} \\ \hline
-\textbf{RS.A} & Fiducial Milky Way CGM Simulation and Convergence Study & RO.A, RO.B & $N = 128^3$ to $N=4096^3$ & 1 to 16,384 & 0.5M\\ \hline
-\multicolumn{6}{|c|}{\it Quarters 2 - 3: 1.7M node hours} \\ \hline
-\textbf{RS.B - G} & Parameter Study, P = 10, 30 & RO.B, RO.C & $N = 1024^3$ & 512 & 0.04M\\ \hline
-\textbf{RS.H - J} & Parameter Study, P = 100 & RO.B, RO.C & $N=2048^3$ & 4096 & 0.17M\\ \hline
-\textbf{RS.K - M} & Parameter Study, P = 300 & RO.B, RO.C & $N=4096^3$ & 16,384 & 1.4M\\ \hline
+{\bf Simulation Type and Details} & {\bf Objective / Milestone} & {\bf Resolution} & {\bf Titan Nodes} & {\bf Titan Node Hours} \\ \hline
+\multicolumn{5}{|c|}{\it Quarter 1: 0.6M node hours} \\ \hline
+Fiducial Milky Way CGM Simulation and Convergence Study & RO.A, RO.B & $N = 128^3$ to $N=4096^3$ & 1 to 16,384 & 0.6M\\ \hline
+\multicolumn{5}{|c|}{\it Quarters 2 - 3: 1.7M node hours} \\ \hline
+Parameter Study, P = 10, 30 & RO.B, RO.C & $N = 1024^3$ & 512 & 0.04M\\ \hline
+Parameter Study, P = 100 & RO.B, RO.C & $N=2048^3$ & 4096 & 0.17M\\ \hline
+Parameter Study, P = 300 & RO.B, RO.C & $N=4096^3$ & 16,384 & 1.4M\\ \hline
 \end{tabular}
 \end{table}
+
+
+Through our INCITE project (AST125), we have obtained a detailed understanding of the scaling of {\tt Cholla}, and as such we are able to accurately estimate the time taken for a single time step using our chosen numerical integration technique (see Section 3.2 for more details of the computational method). When running on the full scale of Titan, our typical blocking is $128^3$ cells per GPU. This means that a $2048^3$ simulation requires 4096 GPUs. With $128^3$ cells per GPU and when running on 4096 GPUs, a single time step takes about 500 ms (this is wall time, and accounts for the weak scaling of the code). Through our preliminary turbulent CGM tests, we have also obtained a good estimate of the required simulation time step, which tends to be around 1 kyr, and is set by the cooling time of the intermediate temperature gas. In order to run a simulation with Milky Way parameters for 3 cooling times, we require 100 Myr of total evolution. This implies $10^5$ time steps per simulation, for a total wall clock time of 50,000 s, or 13.9 hours. With 1 GPU per node on Titan, this gives a requirement of 56,889 node-hours for the $2048^3$ simulation.
+
+The calculation for the $4096^3$ convergence simulation is similar, but we cannot maintain a blocking of $128^3$ cells / GPU at this scale. Instead, we assign $128\times128\times256$ cells to each GPU, which doubles the wall time for each time step, giving 1000 ms. Because the time step is set by the cooling time rather than the courant condition, the total number of time steps to complete the simulation remains the same. When running on 16,384 GPUs, we can then complete the $4096^3$ simulation in a total of 27.8 hours, or 455,000 node-hours. Accounting for the additional convergence study simulations as well as initial development simulations brings our total request for RM.A to 0.6 M node-hours.
+
+We can estimate the time required for the additional parameter study simulations in a similar manner. All of our simulations are expected to have similar intermediate temperature, moderate density gas with fast cooling times, so we do not expect the 1 kyr time step to change. Therefore, estimates of the simulation run time are entirely based on the required resolution, and the cooling time of the initial gas distribution (which determines the total run time). In fact, the total run time should also remain roughly constant. This is a result of the fact that while the higher pressure simulations have higher average density (which decreases the cooling time), they also have higher temperature (which increases it, given the location of the peak of the cooling curve. For example... give some examples of number density - temperature pairs and associated cooling time for the different parameter sims.
+
+
+\subsubsection{Data Requirements}
+
+One snapshot of a $4096^3$ simulation will be 3.3 TB. We will have 4 of these simulations. This will drive our storage requirements. We will create many intermediate data products so that we can analyze with high time frequency, but we should store a minimum of ~10 snapshots per large-scale sim for restarts, and to measure global quantities in post-processing. This means we will need at least 120 TB of space for the large simulations. It would be best to store more snapshots, so for the $2048^3$ sims we would like to store 50. This will require approximately another 80 TB, for a total request of 200 TB of space. The space requirements of the remaining lower resolution simulations are comparably negligible.
 
 
 \vspace{-.25in}
