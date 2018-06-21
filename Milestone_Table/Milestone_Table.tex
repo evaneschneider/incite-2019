@@ -52,24 +52,24 @@
 \textbf{Milestone} & \textbf{Details} & \textbf{Dates} & \textbf{Status (renewals only)} \\ \hline
 \textbf{RM.A} Develop fiducial turbulent CGM model and run resolution study, including first petascale simulation of the CGM. & {\begin{tabular}[l]{@{}l@{}} 
 \textbf {Resources:} Summit \hspace{.5cm}  \textbf{Node hours:} 175k M \\ 
-\textbf{Filesystem storage (TB and dates):} 200 TB, 1/19 - 6/19 \\  
+\textbf{Filesystem storage (TB and dates):} 200 TB scratch, 1/19 - 6/19 \\  
 \textbf{Archival storage (TB and dates):} 150 TB, 3/19 - 6/20\\ 
 \textbf{Software Application:} Cholla \\
-%\textbf{Tasks:} Run 7 simulations increasing resolution from $128^3$ to $8192^3$
+\textbf{Tasks:} Determine appropriate initial conditions for fiducial run; \\ Run 7 simulations increasing resolution from $128^3$ to $8192^3$ \\
 \textbf{Dependencies:} N/A \end{tabular}} & 1/19 - 6/19 & N/A \\ \hline
 \textbf{RM.B} Parameter study: Run suite of turbulent box simulations at varying CGM pressure and mach number. & {\begin{tabular}[l]{@{}l@{}} 
 \textbf {Resources:} Titan \hspace{.5cm}  \textbf{Node hours:} 355k \\ 
-\textbf{Filesystem storage (TB and dates):} 200 TB, 7/19 - 12/19 \\  
+\textbf{Filesystem storage (TB and dates):} 200 TB scratch, 7/19 - 12/19 \\  
 \textbf{Archival storage (TB and dates):} 350 TB, 7/19 - 6/20 \\ 
 \textbf{Software Application:} Cholla \\
-%\textbf{Tasks:} Run 10 parameter study simulations (as outlined in Section 2 of Project Narrative)
+\textbf{Tasks:} Run 10 parameter study simulations from \\ P = 10 to P = 300 and M = 0.3 to M = 1.0 \\ (as outlined in Section 2 of Project Narrative) \\
 \textbf{Dependencies:} RM.A \end{tabular}} & 6/19 - 12/19 & N/A \\ \hline
 \textbf{RM.C} Compute ionization fractions for various species using results of all simulations and generate comparisons to observations of the CGM. & {\begin{tabular}[l]{@{}l@{}} 
 \textbf {Resources:} Rhea \hspace{.5cm}  \textbf{Node hours:} 100k \\ 
-\textbf{Filesystem storage (TB and dates):} 200 TB, 1/19 - 12/19 \\  
-\textbf{Archival storage (TB and dates):} 500 TB, 3/19 - 6/20 \\ 
+\textbf{Filesystem storage (TB and dates):} 200 TB scratch, 1/19 - 12/19 \\  
+\textbf{Archival storage (TB and dates):} N/A \\ 
 \textbf{Software Application:} Python analysis scripts \\
-%\textbf{Tasks:} Generate observables from simulation data in post-processing
+\textbf{Tasks:} Generate observables from simulation data in post-processing \\
 \textbf{Dependencies:} RM.A, RM.B \end{tabular}} & 7/19 - 12/19 & N/A \\ \hline
 \end{tabular}
 \end{table}
