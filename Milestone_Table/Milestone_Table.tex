@@ -50,27 +50,27 @@
 \noalign{\smallskip}
 \multicolumn{4}{l}{\textbf {Year 1}}\\ \hline
 \textbf{Milestone} & \textbf{Details} & \textbf{Dates} & \textbf{Status (renewals only)} \\ \hline
-\textbf{RM.A} Develop "fiducial" turbulent CGM model and run resolution study, including first petascale simulation of the CGM. & {\begin{tabular}[l]{@{}l@{}} 
-\textbf {Resources:} Titan \hspace{.5cm}  \textbf{Node hours:} 0.5 M \\ 
-\textbf{Filesystem storage (TB and dates):} insert text, 01/19 - 03/19 \\  
-\textbf{Archival storage (TB and dates):} 03/19 - 03/20\\ 
+\textbf{RM.A} Develop fiducial turbulent CGM model and run resolution study, including first petascale simulation of the CGM. & {\begin{tabular}[l]{@{}l@{}} 
+\textbf {Resources:} Summit \hspace{.5cm}  \textbf{Node hours:} 175k M \\ 
+\textbf{Filesystem storage (TB and dates):} 200 TB, 1/19 - 6/19 \\  
+\textbf{Archival storage (TB and dates):} 150 TB, 3/19 - 6/20\\ 
 \textbf{Software Application:} Cholla \\
-\textbf{Tasks:} insert text
-\textbf{Dependencies:} N/A \end{tabular}} & 01/19 - 03/19 & N/A \\ \hline
-\textbf{RM.B} Run suite of moderate resolution turbulent box simulations to explore relevant parameter space. & {\begin{tabular}[l]{@{}l@{}} 
-\textbf {Resources:} Titan \hspace{.5cm}  \textbf{Node hours:} 0.7M \\ 
-\textbf{Filesystem storage (TB and dates):} insert text, 04/19 - 06/19 \\  
-\textbf{Archival storage (TB and dates):} 06/19 - 06/20 \\ 
+%\textbf{Tasks:} Run 7 simulations increasing resolution from $128^3$ to $8192^3$
+\textbf{Dependencies:} N/A \end{tabular}} & 1/19 - 6/19 & N/A \\ \hline
+\textbf{RM.B} Parameter study: Run suite of turbulent box simulations at varying CGM pressure and mach number. & {\begin{tabular}[l]{@{}l@{}} 
+\textbf {Resources:} Titan \hspace{.5cm}  \textbf{Node hours:} 355k \\ 
+\textbf{Filesystem storage (TB and dates):} 200 TB, 7/19 - 12/19 \\  
+\textbf{Archival storage (TB and dates):} 350 TB, 7/19 - 6/20 \\ 
 \textbf{Software Application:} Cholla \\
-\textbf{Tasks:} 
-\textbf{Dependencies:} N/A \end{tabular}} & 04/19 - 06/19 & N/A \\ \hline
-\textbf{RM.C} Run additional extreme resolution models (as informed by parameter study) to produce a state-of-the-art suite of numerical simulations. & {\begin{tabular}[l]{@{}l@{}} 
-\textbf {Resources:} Titan \hspace{.5cm}  \textbf{Node hours:} 1.5M \\ 
-\textbf{Filesystem storage (TB and dates):} insert text, 07/19 - 09/19 \\  
-\textbf{Archival storage (TB and dates):} insert text, 09/19 - 09/20 \\ 
-\textbf{Software Application:} Cholla \\
-\textbf{Tasks:}
-\textbf{Dependencies:} RM.A, RM.B \end{tabular}} & 07/19 - 09/19 & N/A \\ \hline
+%\textbf{Tasks:} Run 10 parameter study simulations (as outlined in Section 2 of Project Narrative)
+\textbf{Dependencies:} RM.A \end{tabular}} & 6/19 - 12/19 & N/A \\ \hline
+\textbf{RM.C} Compute ionization fractions for various species using results of all simulations and generate comparisons to observations of the CGM. & {\begin{tabular}[l]{@{}l@{}} 
+\textbf {Resources:} Rhea \hspace{.5cm}  \textbf{Node hours:} 100k \\ 
+\textbf{Filesystem storage (TB and dates):} 200 TB, 1/19 - 12/19 \\  
+\textbf{Archival storage (TB and dates):} 500 TB, 3/19 - 6/20 \\ 
+\textbf{Software Application:} Python analysis scripts \\
+%\textbf{Tasks:} Generate observables from simulation data in post-processing
+\textbf{Dependencies:} RM.A, RM.B \end{tabular}} & 7/19 - 12/19 & N/A \\ \hline
 \end{tabular}
 \end{table}
 
