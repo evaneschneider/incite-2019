@@ -31,7 +31,7 @@
 \setlength{\parindent}{0in} % Amount of indentation at the first line of a paragraph.
 
 
-\pagestyle{fancy} \lhead{Title} \rhead{Lead PI} \renewcommand{%
+\pagestyle{fancy} \lhead{The Detailed Physical Structure of the Circumgalactic Medium} \rhead{Evan Schneider} \renewcommand{%
 \headrulewidth}{0.0pt}
 
 \begin{center}
@@ -43,20 +43,37 @@
 \begin{flushleft}
 {\noindent \bf  {PERSONNEL JUSTIFICATION}}
 
-What personnel are already in place and what are their roles on the project? If applicable, describe (i) personnel that will be hired for the project in the future and their responsibilities and (ii) potential personnel turnover that may occur during the project and a strategy for replacing them. The INCITE program welcomes proposals from individual PIs or teams of collaborators. 
+%What personnel are already in place and what are their roles on the project? If applicable, describe (i) personnel that will be hired for the project in the future and their responsibilities and (ii) potential personnel turnover that may occur during the project and a strategy for replacing them. The INCITE program welcomes proposals from individual PIs or teams of collaborators.
+The proposed project personnel consists of the project leaders and support scientists. The project leads are the two co-PI's, Dr. Evan Schneider and Dr. Drummond Fielding. Co-PI Schneider has previous experience running on OLCF systems (both Titan and Summit) and is the primary architect of the {\tt Cholla} hydrodynamics code that will be used to carry out the project. She will therefore serve as the project's technical lead. Co-PI Fielding has previous experience running the kinds of turbulence box simulations that make up the project, as well as the idealized galaxy halo simulations that motivated the project, and will therefore serve as the project's science lead. Both Schneider and Fielding are experts in the field of numerical simulation and CGM science. Support scientists are other researchers that will be associated with the project and will assist with analysis efforts. Support scientists will not need access to OLCF systems or data. Co-I Dr. Greg Bryan is the only currently-identified support scientist, but others may be added at a later point if the project is accepted. Schneider, Fielding, and Bryan are all part of a larger collaboration based at the Flatiron Institute that is broadly interested in investigating the CGM.
 
-Insert paragraph(s). 
+Both Schneider and Fielding have funded postdoctoral fellowships at their respective institutions for the entire duration of the project, so no personnel turnover is anticipated.
+
+Project Leadership:
 \vspace{-.15in}
 \begin{itemize}
-\item Text\\ 
-\item Text\\
+\item Principle Investigator: Evan Schneider (Princeton) \\ 
+\item Co-Principle Investigator: Drummond Fielding (Flatiron Institute) \\
+\end{itemize} 
+
+Support Scientists:
+\vspace{-.15in}
+\begin{itemize}
+\item Co Investigator: Greg Bryan (Columbia University / Flatiron Institute) \\ 
+\item Additional collaborators (to be determined)
 \end{itemize} 
 
 {\noindent \bf  {MANAGEMENT PLAN}}
 
-Describe the project's leadership team and how decisions are made to allocate time to individuals or, for proposals with multiple collaborating teams, subgroups within the project. Describe the focus of each individual or subgroup. Successful proposals will include a management plan that conveys to reviewers the interrelationship between subgroups and how the sum of the parts will lead to scientific discovery or engineering solutions that are the overarching goal of the project. Also identify points of contact who will provide updates on the status of the work including publications, awards, and highlights of accomplishments.
+%Describe the project's leadership team and how decisions are made to allocate time to individuals or, for proposals with multiple collaborating teams, subgroups within the project. Describe the focus of each individual or subgroup. Successful proposals will include a management plan that conveys to reviewers the interrelationship between subgroups and how the sum of the parts will lead to scientific discovery or engineering solutions that are the overarching goal of the project. Also identify points of contact who will provide updates on the status of the work including publications, awards, and highlights of accomplishments.
+Responsibilities for carrying out tasks associated with the project will be split primarily between the two co-PIs. Co-PI Fielding will spearhead the initial development work, including any improvements to the turbulence generator in {\tt Cholla} and running preliminary tests to determine appropriate initial conditions and energy injection routines (some of which has already been done to service this proposal). Co-PI Schneider will be primarily responsible for ensuring that the {\tt Cholla} codebase is updated with any necessary modules (e.g. in-situ analysis routines) needed to carry out the project. Fielding will be responsible for carrying out the production simulations, with assistance and expertise provided by Schneider as needed. Intermediate analysis tasks such as data management and parallel statistic analysis will be carried out by Schneider using tools developed for {\tt Cholla} during the course of the ongoing INCITE project AST125. Additional data analyses (e.g. computing ionization fractions for comparison to observations) will be carried out by both Fielding and Schneider. Co-I Bryan will be the project lead on analysis related to developing a sub-grid model for use in cosmological simulations.
 
-Insert paragraph(s).
+The primary tools for collaboration within the project will be Github and Slack. All of the project's personnel are familiar with both, and have used them effectively for collaborative projects in the past. For example, discussions related to project planning, execution, and simulation analysis can all be carried out efficiently within the project's Slack channel. Shared code, including {\tt Cholla}, data management, and analysis scripts, will be managed and shared using github. We have found this method to be both easy and efficient - it was used to prepare this proposal. In addition to regular discussion via Slack, the project will have monthly in-person meetings at the Flatiron Institute in New York (both Fielding and Bryan are based at that institution, and Schneider travels there regularly).
+
+Co-PI Schneider will be the primary point of contact for updating the OLCF about the status of the project. Both Schneider and Fielding will interface with the OLCF liason and staff to ensure maximally productive use of the project's resources.
+
+Paper authorship will be decided jointly amongst the collaborators, and will be reflective of the effort of individuals working on the project.
+
+
 \end{flushleft}
 
 \end{document}
