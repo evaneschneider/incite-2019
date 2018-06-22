@@ -266,6 +266,17 @@ As demonstrated in low resolution idealized global simulations of the CGM, the t
 
 Physically, the pressure determines the cooling time of the hot, volume-filling component since $t_{\rm cool, hot} \propto P^{-1}$. On the other hand the turbulent Mach number regulates the width of the density distribution around the mean values. Higher turbulent Mach number lead to broader density distributions, which, therefore, increases the amount of cool gas we expect to find populating the high density, low temperature, rapidly cooling tail of the distribution (see Figure~\ref{fig:sim_phase}). Turbulent motions, however, also tend to shred and destroy cold clouds as they condense out of the ambient medium. This competition between cooling and mixing is fundamental to the phase structure and overall dynamics, and yet has never been studied in detail. Our parameter survey will, for the first time, enable us to characterize how this competition plays out across the full range of spatial scales in different environments.
 
+\begin{figure}[t]
+    \centering
+    \begin{minipage}{0.6\textwidth}
+        \includegraphics[width=\textwidth]{velocities.pdf} 
+    \end{minipage}\hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+\caption{ Velocity dispersion (dark blue line; $\delta v = \sqrt{\langle v^2 \rangle - \langle v \rangle^2}$) and sound speed (orange dashed line; $c_{\rm s}$) profiles in global CGM simulations \cite{Fielding17}. The shaded regions trace the one sigma temporal variability around the median values over the full 9 Gyr duration of the simulation demonstrating the need to study how the phase structure changes for a range in Mach number $\mathcal{M} = \delta v /  c_{\rm s}$ from 0.1 to 1. \label{fig:velocities}} 
+\end{minipage}
+\end{figure}
+
 The range of pressures and Mach numbers we will scan in our parameter study will cover the values predicted by idealized global CGM simulations \cite{Fielding17} and cosmological simulations \cite{Nelson+16}. We will run simulations with $P = 10, 30, 100$ and 300 K\,cm$^{-3}$.  At each pressure we will drive turbulence with Mach numbers $\mathcal{M} = 0.1, 0.3$ and 1, thereby probing the subsonic and transonic regimes. 
 Based on the results of our convergence study (RM.A), we will know the number of grid cells per cold cloud size $\ell_{\rm cool}$ required to adequately resolve the phase structure of the gas.
 The resolution at each pressure will then be determined by the relation of the turbulent driving scale ($R_{\rm CGM}$) to the cold cloud size ($\ell_{\rm cool}$).
@@ -280,18 +291,6 @@ Figure~\ref{fig:cs_tcool} demonstrates that the resolution requirements are most
 
 %Once we have developed an understanding of the effects of the velocity dispersion, we will turn to the pressure dependence of the CGM properties. As demonstrated in Figure~\ref{fig:cs_tcool}, we expect the pressure of the confining medium to be the primary factor that sets the length scale of the cool clouds embedded within it. To characterize this dependence, we will carry out a suite of simulations similar to those described in the previous paragraph, but this time at constant Mach number while varying the pressure. Because the resolution requirement is expected to scale with the size of the cool clouds, the highest pressure simulations will also be the most computationally demanding, with CGM pressures of $P/k_B \sim 300$ likely requiring $N = 8192^3$ cells to be fully resolved. On the other hand, while the lower pressure simulations will have less strict resolution requirements, the lower average density of the gas will increase the associated cooling time ($t_\mathrm{cool} \propto n^{-2}$), while the physical time step set by the intermediate temperature gas remains the same, so these simulations will need to run for much longer in order for the phase structure to equilibrate. Both the high and low pressure simulations are thus expected to require petascale resources to be converged (see Section 3.1).
 
-
-
-\begin{figure}[t]
-    \centering
-    \begin{minipage}{0.6\textwidth}
-        \includegraphics[width=\textwidth]{velocities.pdf} 
-    \end{minipage}\hfill
-    \begin{minipage}{0.4\textwidth}
-        \centering
-\caption{ Velocity dispersion (dark blue line; $\delta v = \sqrt{\langle v^2 \rangle - \langle v \rangle^2}$) and sound speed (orange dashed line; $c_{\rm s}$) profiles in global CGM simulations \cite{Fielding17}. The shaded regions trace the one sigma temporal variability around the median values over the full 9 Gyr duration of the simulation demonstrating the need to study how the phase structure changes for a range in Mach number $\mathcal{M} = \delta v /  c_{\rm s}$ from 0.1 to 1. \label{fig:velocities}} 
-\end{minipage}
-\end{figure}
 
 
 \vspace{-.25in}
